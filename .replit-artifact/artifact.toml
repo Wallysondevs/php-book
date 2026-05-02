@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/php-book/"
+title = "PHP — Manual Definitivo"
+version = "1.0.0"
+id = "artifacts/php-book"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/php-book/" ]
+localPort = 21413
+
+[services.development]
+run = "pnpm --filter @workspace/php-book run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/php-book", "run", "build" ]
+publicDir = "artifacts/php-book/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21413"
+BASE_PATH = "/php-book/"

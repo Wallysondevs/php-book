@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  /* Arch palette */
+  --color-arch-blue: #8993BE;
+  --color-arch-blue-dark: #4F5B93;
+  --color-arch-bg-deep: #08090C;
+  --color-term-green: #5FFF87;
+  --color-term-yellow: #FFD75F;
+  --color-term-red: #FF5F5F;
+  --color-term-magenta: #FF87FF;
+  --color-term-cyan: #5FFFFF;
+  --color-term-blue: #5FAFFF;
+  --color-term-white: #E4E4E4;
+  --color-term-grey: #6C7086;
+}
+
+:root {
+  /* Light mode (the dark theme is primary, but keep this readable) */
+  --background: 0 0% 98%;
+  --foreground: 218 27% 8%;
+  --card: 0 0% 100%;
+  --card-foreground: 218 27% 8%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 218 27% 8%;
+  --primary: 232 25% 60%; /* Arch blue */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 142 71% 45%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 218 14% 92%;
+  --muted-foreground: 218 11% 35%;
+  --accent: 218 14% 92%;
+  --accent-foreground: 218 27% 8%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 218 14% 86%;
+  --input: 218 14% 86%;
+  --ring: 232 25% 60%;
+}
+
+.dark {
+  /* Dark mode - Authentic Arch terminal feel */
+  --background: 220 18% 5%;        /* near-black, slight blue */
+  --foreground: 210 17% 90%;       /* terminal off-white */
+  --card: 220 16% 8%;              /* panels */
+  --card-foreground: 210 17% 90%;
+  --popover: 220 16% 8%;
+  --popover-foreground: 210 17% 90%;
+  --primary: 232 25% 60%;          /* #8993BE Arch blue */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 142 71% 50%;        /* terminal green */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 220 14% 12%;
+  --muted-foreground: 218 12% 60%;
+  --accent: 220 14% 14%;
+  --accent-foreground: 210 17% 90%;
+  --destructive: 0 75% 55%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 12% 18%;
+  --input: 220 12% 18%;
+  --ring: 232 25% 60%;
+}
+
+html {
+  background: hsl(var(--background));
+  /* Firefox custom scrollbar (always visible, Arch teal) */
+  scrollbar-width: thin;
+  scrollbar-color: hsl(232 25% 60%) hsl(220 16% 6%);
+}
+
+/* WebKit custom scrollbar on root document — visible, terminal-styled */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: hsl(220 16% 6%);
+  border-left: 1px solid hsl(220 12% 14%);
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, hsl(232 25% 60%), hsl(232 28% 45%));
+  border: 2px solid hsl(220 16% 6%);
+  box-shadow: inset 0 0 4px hsl(232 25% 70% / 0.4);
+}
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, hsl(232 25% 65%), hsl(201 78% 40%));
+  box-shadow: inset 0 0 8px hsl(232 25% 80% / 0.6), 0 0 4px hsl(232 25% 55% / 0.4);
+}
+html::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner {
+  background: hsl(220 16% 6%);
+}
+
+body {
+  background: hsl(var(--background));
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Custom selection — Arch blue glow */
+::selection {
+  background: hsl(232 25% 60% / 0.35);
+  color: hsl(210 17% 95%);
+  text-shadow: 0 0 6px hsl(232 25% 75% / 0.5);
+}
+
+/* Custom focus ring */
+*:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ========================================================================
+   CUSTOM SCROLLBAR — fully custom, terminal/arch style, no browser default
+   ======================================================================== */
+
+/* WebKit (Chrome, Safari, Edge) */
+.arch-scroll::-webkit-scrollbar,
+.arch-scroll *::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.arch-scroll::-webkit-scrollbar-track,
+.arch-scroll *::-webkit-scrollbar-track {
+  background: hsl(220 16% 6%);
+  border-left: 1px solid hsl(220 12% 14%);
+}
+
+.arch-scroll::-webkit-scrollbar-thumb,
+.arch-scroll *::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, hsl(232 25% 60%), hsl(232 28% 45%));
+  border-radius: 0;
+  border: 2px solid hsl(220 16% 6%);
+  box-shadow: inset 0 0 4px hsl(232 25% 70% / 0.4);
+}
+
+.arch-scroll::-webkit-scrollbar-thumb:hover,
+.arch-scroll *::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, hsl(232 25% 65%), hsl(201 78% 40%));
+  box-shadow: inset 0 0 8px hsl(232 25% 80% / 0.6), 0 0 4px hsl(232 25% 55% / 0.4);
+}
+
+.arch-scroll::-webkit-scrollbar-corner,
+.arch-scroll *::-webkit-scrollbar-corner {
+  background: hsl(220 16% 6%);
+}
+
+/* Firefox */
+.arch-scroll,
+.arch-scroll * {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(232 25% 60%) hsl(220 16% 6%);
+}
+
+/* Terminal-specific scrollbar (inside <pre>/output blocks) */
+.terminal-scroll::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.terminal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.terminal-scroll::-webkit-scrollbar-thumb {
+  background: hsl(232 25% 60% / 0.5);
+  border-radius: 3px;
+}
+.terminal-scroll::-webkit-scrollbar-thumb:hover {
+  background: hsl(232 25% 70% / 0.8);
+}
+.terminal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(232 25% 60% / 0.5) transparent;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-foreground;
+  }
+
+  h1 { @apply text-4xl lg:text-5xl mb-6; }
+  h2 {
+    @apply text-2xl lg:text-3xl mt-14 mb-5 pb-3;
+    border-bottom: 1px solid hsl(var(--border));
+    position: relative;
+  }
+  h2::before {
+    content: ">_";
+    color: hsl(var(--primary));
+    font-family: var(--font-mono);
+    font-size: 0.7em;
+    margin-right: 0.6rem;
+    opacity: 0.7;
+  }
+  h3 { @apply text-xl lg:text-2xl mt-10 mb-4 text-foreground; }
+  h3::before {
+    content: "# ";
+    color: hsl(var(--primary));
+    font-family: var(--font-mono);
+    opacity: 0.6;
+  }
+  p { @apply leading-relaxed mb-4 text-muted-foreground; }
+  ul, ol { @apply mb-6 ml-6 text-muted-foreground; }
+  li { @apply mb-2; }
+  strong { @apply font-semibold text-foreground; }
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background: hsl(220 16% 12%);
+    color: hsl(232 25% 75%);
+    padding: 0.15em 0.45em;
+    border-radius: 4px;
+    border: 1px solid hsl(220 12% 16%);
+  }
+  a {
+    color: hsl(var(--primary));
+    text-decoration: none;
+    border-bottom: 1px dashed hsl(var(--primary) / 0.5);
+    transition: all 0.15s;
+  }
+  a:hover {
+    border-bottom-style: solid;
+    text-shadow: 0 0 8px hsl(var(--primary) / 0.4);
+  }
+}
+
+/* ========================================================================
+   GLOBAL CRT/TERMINAL FLAVOR
+   ======================================================================== */
+
+.glass-panel {
+  background: hsl(220 16% 8% / 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid hsl(220 12% 16%);
+}
+
+/* Subtle background grid like a terminal screen */
+.arch-grid-bg {
+  background-image:
+    linear-gradient(hsl(232 25% 60% / 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(232 25% 60% / 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Soft horizontal scanlines used on hero/special sections */
+.arch-scanlines {
+  position: relative;
+}
+.arch-scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0,
+    transparent 2px,
+    hsl(0 0% 100% / 0.012) 2px,
+    hsl(0 0% 100% / 0.012) 3px
+  );
+  pointer-events: none;
+}
+
+/* Caret/cursor blink for command prompts */
+@keyframes arch-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.arch-cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  background: hsl(232 25% 70%);
+  vertical-align: middle;
+  margin-left: 2px;
+  animation: arch-blink 1.05s steps(1, end) infinite;
+  box-shadow: 0 0 8px hsl(232 25% 70% / 0.6);
+}
+
+/* Soft glow text — used for hero "[dev@php ~]$" style */
+.term-glow {
+  text-shadow: 0 0 4px currentColor, 0 0 12px hsl(232 25% 55% / 0.3);
+}
+
+/* Terminal palette helpers */
+.txt-term-green   { color: var(--color-term-green); }
+.txt-term-yellow  { color: var(--color-term-yellow); }
+.txt-term-red     { color: var(--color-term-red); }
+.txt-term-magenta { color: var(--color-term-magenta); }
+.txt-term-cyan    { color: var(--color-term-cyan); }
+.txt-term-blue    { color: var(--color-term-blue); }
+.txt-term-white   { color: var(--color-term-white); }
+.txt-term-grey    { color: var(--color-term-grey); }
+.txt-arch-blue    { color: var(--color-arch-blue); }
