@@ -14,7 +14,25 @@ export default function Visibilidade() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/classes" className="text-[#8993BE] underline">Classes e Objetos</a> e <a href="#/funcoes" className="text-[#8993BE] underline">Funções</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"public"}</strong> {' — '} {"acessível de qualquer lugar."}
+          </li>
+        <li>
+            <strong>{"protected"}</strong> {' — '} {"visível na própria classe e em filhas."}
+          </li>
+        <li>
+            <strong>{"private"}</strong> {' — '} {"visível só na classe que declarou."}
+          </li>
+        <li>
+            <strong>{"Property promotion (8.0)"}</strong> {' — '} {"public function __construct(private int $id) — declara e atribui em uma linha."}
+          </li>
+        <li>
+            <strong>{"readonly (8.1)"}</strong> {' — '} {"só pode ser escrita uma vez (no construtor)."}
+          </li>
+        </ul>
+    
       <h2>O problema: tudo público é uma armadilha</h2>
       <p>
         Quando toda propriedade é <code>public</code>, qualquer parte do programa pode mexer no estado interno do objeto.

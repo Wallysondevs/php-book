@@ -13,7 +13,28 @@ export default function CsrfXss() {
       timeToRead="14 min"
       category="Segurança"
     >
-      <h2>Por que esses três (e não outros)</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"CSRF"}</strong> {' — '} {"forçar usuário logado a executar ação sem querer."}
+          </li>
+        <li>
+            <strong>{"Token CSRF"}</strong> {' — '} {"valor secreto por sessão checado em cada POST."}
+          </li>
+        <li>
+            <strong>{"XSS"}</strong> {' — '} {"injetar JS na página através de input não escapado."}
+          </li>
+        <li>
+            <strong>{"htmlspecialchars()"}</strong> {' — '} {"escapa <, >, \", & — base de defesa contra XSS."}
+          </li>
+        <li>
+            <strong>{"CSP"}</strong> {' — '} {"Content-Security-Policy — header que limita scripts permitidos."}
+          </li>
+        </ul>
+          <h2>Por que esses três (e não outros)</h2>
       <p>
         O OWASP Top 10 muda de ano em ano, mas <strong>injeção</strong> (SQL e
         comandos), <strong>XSS</strong> (cross-site scripting) e <strong>CSRF</strong>

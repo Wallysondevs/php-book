@@ -13,7 +13,28 @@ export default function SecurityHeaders() {
       timeToRead="12 min"
       category="Segurança"
     >
-      <h2>Por que headers e não só código</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"CSP"}</strong> {' — '} {"Content-Security-Policy — controla origens de scripts/imagens."}
+          </li>
+        <li>
+            <strong>{"HSTS"}</strong> {' — '} {"Strict-Transport-Security — força HTTPS."}
+          </li>
+        <li>
+            <strong>{"X-Frame-Options"}</strong> {' — '} {"previne clickjacking via iframe."}
+          </li>
+        <li>
+            <strong>{"X-Content-Type-Options"}</strong> {' — '} {"nosniff — evita MIME sniffing."}
+          </li>
+        <li>
+            <strong>{"Referrer-Policy"}</strong> {' — '} {"controla quanto da URL vaza no Referer."}
+          </li>
+        </ul>
+          <h2>Por que headers e não só código</h2>
       <p>
         Você pode escrever PHP perfeito — escapar todo HTML, validar todo input,
         usar prepared statements — e ainda assim levar XSS por causa de um único

@@ -14,7 +14,28 @@ export default function Reactphp() {
       timeToRead="13 min"
       category="Async & Fibers"
     >
-      <h2>O problema: 10 chamadas HTTP que demoram uma eternidade</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Event loop"}</strong> {' — '} {"núcleo single-thread que despacha I/O sem bloquear."}
+          </li>
+        <li>
+            <strong>{"Promise"}</strong> {' — '} {"representa valor futuro; .then encadeia."}
+          </li>
+        <li>
+            <strong>{"Streams"}</strong> {' — '} {"leitura/escrita não-bloqueante."}
+          </li>
+        <li>
+            <strong>{"vs PHP-FPM"}</strong> {' — '} {"long-running em vez de spawn-die por request."}
+          </li>
+        <li>
+            <strong>{"Casos de uso"}</strong> {' — '} {"WebSockets, microservices push, jobs em background."}
+          </li>
+        </ul>
+          <h2>O problema: 10 chamadas HTTP que demoram uma eternidade</h2>
       <p>
         Imagine que você precisa consultar 10 APIs externas e juntar os resultados. Em PHP síncrono
         clássico, cada chamada bloqueia a próxima. Se cada uma leva 1 segundo, você espera 10 segundos

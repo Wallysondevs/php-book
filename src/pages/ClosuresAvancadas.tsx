@@ -12,7 +12,28 @@ export default function ClosuresAvancadas() {
       timeToRead="12 min"
       category="Reflection & Meta"
     >
-      <h2>Recapitulando: o que é uma Closure?</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"use() lexical"}</strong> {' — '} {"lista variáveis do escopo pai a importar; por valor por padrão."}
+          </li>
+        <li>
+            <strong>{"$this em closure"}</strong> {' — '} {"closures dentro de classes ligam $this automaticamente."}
+          </li>
+        <li>
+            <strong>{"Closure::bind()"}</strong> {' — '} {"religa $this/escopo de uma closure a outro objeto."}
+          </li>
+        <li>
+            <strong>{"Closure::fromCallable()"}</strong> {' — '} {"transforma callable (string ou array) em objeto Closure."}
+          </li>
+        <li>
+            <strong>{"First-class callable (8.1)"}</strong> {' — '} {"strlen(...) cria uma Closure a partir de qualquer função."}
+          </li>
+        </ul>
+          <h2>Recapitulando: o que é uma Closure?</h2>
       <p>
         Toda função anônima em PHP é, na prática, uma instância da classe nativa{" "}
         <code>Closure</code>. Isso significa que ela é um objeto, pode ser passada como argumento,

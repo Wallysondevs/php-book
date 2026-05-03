@@ -12,7 +12,28 @@ export default function PhpCli() {
       timeToRead="10 min"
       category="Instalação"
     >
-      <h2>Esqueça o Apache por um instante</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"php script.php"}</strong> {' — '} {"executa script no terminal."}
+          </li>
+        <li>
+            <strong>{"$argv / $argc"}</strong> {' — '} {"argumentos da linha de comando."}
+          </li>
+        <li>
+            <strong>{"STDIN/STDOUT/STDERR"}</strong> {' — '} {"streams padrão pré-abertos."}
+          </li>
+        <li>
+            <strong>{"php -r"}</strong> {' — '} {"executa código inline."}
+          </li>
+        <li>
+            <strong>{"php -i"}</strong> {' — '} {"mostra info do build (phpinfo equivalente)."}
+          </li>
+        </ul>
+          <h2>Esqueça o Apache por um instante</h2>
       <p>
         Tem uma confusão comum: muita gente acha que PHP <em>é</em> o Apache. Não é. PHP é um programa
         de linha de comando que <strong>também</strong> sabe rodar via servidor web. No terminal,

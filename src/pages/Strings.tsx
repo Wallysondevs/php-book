@@ -15,7 +15,25 @@ export default function Strings() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/variaveis" className="text-[#8993BE] underline">Variáveis</a>, <a href="#/tipos" className="text-[#8993BE] underline">Tipos</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"\"\" vs aspas simples"}</strong> {' — '} {"aspas duplas interpolam variáveis e escapes; simples não."}
+          </li>
+        <li>
+            <strong>{"Heredoc"}</strong> {' — '} {"<<<EOT — multiline com interpolação; nowdoc é literal."}
+          </li>
+        <li>
+            <strong>{"sprintf"}</strong> {' — '} {"formatação tipo printf; %d, %s, %.2f."}
+          </li>
+        <li>
+            <strong>{"mb_*"}</strong> {' — '} {"versões multibyte para Unicode (mb_strlen, mb_substr)."}
+          </li>
+        <li>
+            <strong>{"Concatenação"}</strong> {' — '} {"usa . — não +."}
+          </li>
+        </ul>
+    
       <h2>Por que existem dois tipos de aspas?</h2>
       <p>
         Você abre seu primeiro arquivo PHP e logo encontra <code>'texto'</code> e <code>"texto"</code> sendo
@@ -74,7 +92,7 @@ declare(strict_types=1);
 $nome = "Ada";
 $projeto = "Analytical Engine";
 
-$email = <<<EMAIL
+$email = {"<<<"}EMAIL
 Olá, {$nome}!
 
 Seu projeto "{$projeto}" foi aprovado para a próxima rodada.
@@ -105,7 +123,7 @@ PHP Book`}
 declare(strict_types=1);
 
 function gerarHtml(string $titulo, string $corpo): string {
-    return <<<HTML
+    return {"<<<"}HTML
         <article>
             <h1>{$titulo}</h1>
             <p>{$corpo}</p>
@@ -131,7 +149,7 @@ echo gerarHtml("Lançamento", "Saiu o PHP 8.4!");`}
         code={`<?php
 declare(strict_types=1);
 
-$snippet = <<<'JS'
+$snippet = {"<<<"}'JS'
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
 JS;

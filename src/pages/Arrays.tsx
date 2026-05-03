@@ -14,7 +14,25 @@ export default function Arrays() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/variaveis" className="text-[#8993BE] underline">Variáveis</a>, <a href="#/tipos" className="text-[#8993BE] underline">Tipos</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Array indexado"}</strong> {' — '} {"[1,2,3] — chaves numéricas automáticas."}
+          </li>
+        <li>
+            <strong>{"Associativo"}</strong> {' — '} {"[\"nome\" => \"Ana\"] — chaves string."}
+          </li>
+        <li>
+            <strong>{"Multidimensional"}</strong> {' — '} {"arrays dentro de arrays."}
+          </li>
+        <li>
+            <strong>{"count()"}</strong> {' — '} {"tamanho do array; recursive como segundo arg."}
+          </li>
+        <li>
+            <strong>{"Spread (...)"}</strong> {' — '} {"$novo = [...$a, ...$b] — junta arrays preservando associativos."}
+          </li>
+        </ul>
+    
       <h2>Um array que é tudo ao mesmo tempo</h2>
       <p>
         Em PHP <strong>não existe</strong> distinção entre lista, dicionário e tupla. O array do PHP é uma

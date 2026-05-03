@@ -13,7 +13,28 @@ export default function Tdd() {
       timeToRead="14 min"
       category="Testes"
     >
-      <h2>O que é TDD (e o que NÃO é)</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Red"}</strong> {' — '} {"escreve teste que falha."}
+          </li>
+        <li>
+            <strong>{"Green"}</strong> {' — '} {"escreve mínimo código para passar."}
+          </li>
+        <li>
+            <strong>{"Refactor"}</strong> {' — '} {"melhora design sem alterar comportamento."}
+          </li>
+        <li>
+            <strong>{"Baby steps"}</strong> {' — '} {"commits pequenos e frequentes."}
+          </li>
+        <li>
+            <strong>{"Cobertura"}</strong> {' — '} {"meta: testar comportamento, não % por si."}
+          </li>
+        </ul>
+          <h2>O que é TDD (e o que NÃO é)</h2>
       <p>
         TDD é uma <strong>disciplina de design</strong>: você escreve o teste antes do código de
         produção. Não é “ter muitos testes”, não é “100% de cobertura” — é uma sequência muito

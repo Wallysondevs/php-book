@@ -12,7 +12,28 @@ export default function Iteradores() {
       timeToRead="12 min"
       category="SPL & Iteradores"
     >
-      <h2>O problema: por que não basta um array?</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Iterator"}</strong> {' — '} {"interface SPL: rewind, valid, current, key, next."}
+          </li>
+        <li>
+            <strong>{"IteratorAggregate"}</strong> {' — '} {"mais simples: só implementa getIterator()."}
+          </li>
+        <li>
+            <strong>{"Traversable"}</strong> {' — '} {"super-interface; aceita em foreach."}
+          </li>
+        <li>
+            <strong>{"ArrayIterator"}</strong> {' — '} {"implementação pronta para arrays."}
+          </li>
+        <li>
+            <strong>{"vs generator"}</strong> {' — '} {"iterators são objetos completos; generators usam yield."}
+          </li>
+        </ul>
+          <h2>O problema: por que não basta um array?</h2>
       <p>
         Imagine uma classe <code>Carrinho</code> que guarda produtos. Você quer poder escrever{" "}
         <code>foreach ($carrinho as $produto)</code> sem precisar expor o array interno.

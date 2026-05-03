@@ -13,7 +13,28 @@ export default function DoctrineDbal() {
       timeToRead="13 min"
       category="Banco Avançado"
     >
-      <h2>O problema: PDO puro acaba virando colcha de retalhos</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"DBAL"}</strong> {' — '} {"Database Abstraction Layer — camada acima do PDO."}
+          </li>
+        <li>
+            <strong>{"QueryBuilder"}</strong> {' — '} {"API fluente para montar SQL programaticamente."}
+          </li>
+        <li>
+            <strong>{"Schema Manager"}</strong> {' — '} {"inspeciona/altera schema sem SQL cru."}
+          </li>
+        <li>
+            <strong>{"Types"}</strong> {' — '} {"mapeia tipos do banco ↔ tipos PHP."}
+          </li>
+        <li>
+            <strong>{"vs ORM"}</strong> {' — '} {"DBAL = SQL fluente; ORM = objetos persistidos."}
+          </li>
+        </ul>
+          <h2>O problema: PDO puro acaba virando colcha de retalhos</h2>
       <p>
         PDO funciona, mas você logo descobre dores: o placeholder <code>LIMIT ?</code> aceita string em
         MySQL e int em Postgres, <code>BOOLEAN</code> volta como <code>"1"</code> em um driver e como{" "}

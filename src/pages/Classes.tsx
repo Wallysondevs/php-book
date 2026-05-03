@@ -15,7 +15,25 @@ export default function Classes() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/sintaxe" className="text-[#8993BE] underline">Sintaxe básica</a>, <a href="#/variaveis" className="text-[#8993BE] underline">Variáveis</a>, <a href="#/arrays" className="text-[#8993BE] underline">Arrays</a> e <a href="#/funcoes" className="text-[#8993BE] underline">Funções</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"class Nome"}</strong> {' — '} {"declaração de classe; convenção PascalCase."}
+          </li>
+        <li>
+            <strong>{"$this"}</strong> {' — '} {"referência ao objeto atual dentro de métodos de instância."}
+          </li>
+        <li>
+            <strong>{"new Nome()"}</strong> {' — '} {"instancia a classe, chamando __construct."}
+          </li>
+        <li>
+            <strong>{"Propriedades"}</strong> {' — '} {"public/private/protected $x — variáveis da instância."}
+          </li>
+        <li>
+            <strong>{"self vs $this"}</strong> {' — '} {"self::CONST acessa estático/constante; $this->x é instância."}
+          </li>
+        </ul>
+    
       <h2>O problema: arrays associativos não escalam</h2>
       <p>
         Você começa salvando um usuário num array associativo. Depois precisa validar o e-mail, formatar o nome,

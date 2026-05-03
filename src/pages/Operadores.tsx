@@ -15,7 +15,25 @@ export default function Operadores() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/sintaxe" className="text-[#8993BE] underline">Sintaxe básica</a>, <a href="#/variaveis" className="text-[#8993BE] underline">Variáveis</a>, <a href="#/tipos" className="text-[#8993BE] underline">Tipos primitivos</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"== vs ==="}</strong> {' — '} {"igualdade frouxa (faz coerção) vs idêntica (mesmo tipo + valor)."}
+          </li>
+        <li>
+            <strong>{"<=> spaceship"}</strong> {' — '} {"retorna -1, 0 ou 1 — perfeito para usort."}
+          </li>
+        <li>
+            <strong>{"?? null coalescing"}</strong> {' — '} {"$a ?? $b devolve $b se $a for null ou indefinido."}
+          </li>
+        <li>
+            <strong>{"?: ternário curto"}</strong> {' — '} {"$a ?: $b devolve $b se $a for falsy."}
+          </li>
+        <li>
+            <strong>{". concat"}</strong> {' — '} {"em PHP a concatenação é com ponto, não com +."}
+          </li>
+        </ul>
+    
       <h2>Aritméticos: o feijão com arroz</h2>
       <p>
         Os operadores matemáticos são quase iguais aos de qualquer linguagem. Vale destacar três

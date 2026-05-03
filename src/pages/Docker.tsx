@@ -13,7 +13,28 @@ export default function Docker() {
       timeToRead="14 min"
       category="Deploy"
     >
-      <h2>Por que Docker para PHP?</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Dockerfile"}</strong> {' — '} {"receita: FROM, RUN, COPY, ENTRYPOINT."}
+          </li>
+        <li>
+            <strong>{"php:8.3-fpm-alpine"}</strong> {' — '} {"imagem base comum para web."}
+          </li>
+        <li>
+            <strong>{"Multi-stage"}</strong> {' — '} {"build em uma stage, runtime em outra menor."}
+          </li>
+        <li>
+            <strong>{"docker-compose.yml"}</strong> {' — '} {"orquestra app + db + redis em dev."}
+          </li>
+        <li>
+            <strong>{"Volumes"}</strong> {' — '} {"monta código sem rebuild em dev."}
+          </li>
+        </ul>
+          <h2>Por que Docker para PHP?</h2>
       <p>
         “Funciona na minha máquina” acabou virando meme por motivo. Versão de PHP, extensões
         instaladas, versão do MySQL, configuração do Nginx — qualquer divergência entre dev e

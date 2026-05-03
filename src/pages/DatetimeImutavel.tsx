@@ -12,7 +12,28 @@ export default function DatetimeImutavel() {
       timeToRead="13 min"
       category="Datas & Tempo"
     >
-      <h2>O bug que vai te assombrar com DateTime</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Imutável"}</strong> {' — '} {"cada modify devolve nova instância."}
+          </li>
+        <li>
+            <strong>{"Concorrência"}</strong> {' — '} {"objetos imutáveis são naturalmente thread-safe."}
+          </li>
+        <li>
+            <strong>{"Estilo funcional"}</strong> {' — '} {"encadeia ->modify(\"+1 day\")->setTime(0,0)."}
+          </li>
+        <li>
+            <strong>{"Padrão moderno"}</strong> {' — '} {"prefira DateTimeImmutable em todo código novo."}
+          </li>
+        <li>
+            <strong>{"Conversão"}</strong> {' — '} {"DateTime::createFromImmutable / setTimezone."}
+          </li>
+        </ul>
+          <h2>O bug que vai te assombrar com DateTime</h2>
       <p>
         PHP tem duas classes equivalentes: <code>DateTime</code> (mutável) e{" "}
         <code>DateTimeImmutable</code> (imutável). Elas têm a mesma API — mas a primeira é uma armadilha

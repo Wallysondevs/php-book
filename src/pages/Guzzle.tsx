@@ -13,7 +13,28 @@ export default function Guzzle() {
       timeToRead="14 min"
       category="HTTP Cliente"
     >
-      <h2>O problema: cURL nativo é poderoso, mas cansativo</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Guzzle"}</strong> {' — '} {"cliente HTTP popular; abstração sobre cURL."}
+          </li>
+        <li>
+            <strong>{"Promise/Async"}</strong> {' — '} {"requisições paralelas com $client->getAsync."}
+          </li>
+        <li>
+            <strong>{"Middleware"}</strong> {' — '} {"handlers para retry, log, auth."}
+          </li>
+        <li>
+            <strong>{"PSR-7"}</strong> {' — '} {"requests/responses seguem o padrão."}
+          </li>
+        <li>
+            <strong>{"MockHandler"}</strong> {' — '} {"simula respostas em testes."}
+          </li>
+        </ul>
+          <h2>O problema: cURL nativo é poderoso, mas cansativo</h2>
       <p>
         No capítulo anterior você viu que cada <code>GET</code> com timeout, header e tratamento
         de erro vira 10 linhas de <code>curl_setopt</code>. Multiplique por 50 endpoints e a sua

@@ -12,7 +12,28 @@ export default function Attributes() {
       timeToRead="12 min"
       category="PHP Moderno"
     >
-      <h2>O problema: docblocks como código disfarçado de comentário</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"#[Attribute]"}</strong> {' — '} {"metadados estruturados em classes/métodos/props."}
+          </li>
+        <li>
+            <strong>{"Compile-time"}</strong> {' — '} {"parsed mas não executados sem reflection."}
+          </li>
+        <li>
+            <strong>{"vs annotations"}</strong> {' — '} {"sintaxe nativa, sem doc-comment hack."}
+          </li>
+        <li>
+            <strong>{"Uso comum"}</strong> {' — '} {"rotas, validação, ORM mapping (Doctrine, Symfony)."}
+          </li>
+        <li>
+            <strong>{"Targets"}</strong> {' — '} {"#[Attribute(Attribute::TARGET_METHOD)] limita onde se aplica."}
+          </li>
+        </ul>
+          <h2>O problema: docblocks como código disfarçado de comentário</h2>
       <p>
         Antes do PHP 8, frameworks como Symfony e Doctrine guardavam metadados em
         comentários DocBlock. Funciona, mas é frágil: o IDE não checa, um typo passa

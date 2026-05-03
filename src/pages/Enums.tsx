@@ -12,7 +12,28 @@ export default function Enums() {
       timeToRead="11 min"
       category="PHP Moderno"
     >
-      <h2>O problema: constantes soltas e strings mágicas</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"enum Status"}</strong> {' — '} {"tipo enumerado nativo (PHP 8.1+)."}
+          </li>
+        <li>
+            <strong>{"Pure vs backed"}</strong> {' — '} {"puro = só nome; backed = nome + valor (string ou int)."}
+          </li>
+        <li>
+            <strong>{"cases()"}</strong> {' — '} {"método estático que devolve todos os casos."}
+          </li>
+        <li>
+            <strong>{"from() / tryFrom()"}</strong> {' — '} {"converte valor → enum; tryFrom devolve null se inválido."}
+          </li>
+        <li>
+            <strong>{"Métodos"}</strong> {' — '} {"enums podem ter métodos e implementar interfaces."}
+          </li>
+        </ul>
+          <h2>O problema: constantes soltas e strings mágicas</h2>
       <p>
         Antes do PHP 8.1, era comum modelar status de pedido com constantes de classe
         ou — pior — strings cruas espalhadas pelo código. Resultado: erros de digitação

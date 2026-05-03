@@ -13,7 +13,28 @@ export default function Psr11Container() {
       timeToRead="13 min"
       category="PSR Standards"
     >
-      <h2>O problema: instanciar coisas que dependem de coisas</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"ContainerInterface"}</strong> {' — '} {"PSR-11 — get/has para localizar serviços."}
+          </li>
+        <li>
+            <strong>{"DI"}</strong> {' — '} {"Dependency Injection — recebe deps no construtor."}
+          </li>
+        <li>
+            <strong>{"Autowiring"}</strong> {' — '} {"container resolve deps olhando type hints."}
+          </li>
+        <li>
+            <strong>{"Implementations"}</strong> {' — '} {"PHP-DI, Symfony Container, Laravel Container, league/container."}
+          </li>
+        <li>
+            <strong>{"Service vs factory"}</strong> {' — '} {"service = mesma instância; factory = nova a cada get."}
+          </li>
+        </ul>
+          <h2>O problema: instanciar coisas que dependem de coisas</h2>
       <p>
         Imagine um <code>UserController</code> que precisa de um <code>UserRepository</code>,
         que precisa de um <code>PDO</code>, que precisa de uma string de conexão. Se você

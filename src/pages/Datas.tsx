@@ -13,7 +13,28 @@ export default function Datas() {
       timeToRead="11 min"
       category="Datas & Tempo"
     >
-      <h2>O problema: imprimir &quot;agora&quot; em formato brasileiro</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"DateTime"}</strong> {' — '} {"classe principal; mutável."}
+          </li>
+        <li>
+            <strong>{"DateTimeImmutable"}</strong> {' — '} {"preferida — modify retorna nova."}
+          </li>
+        <li>
+            <strong>{"DateInterval"}</strong> {' — '} {"duração; P1Y2M3D = 1 ano 2 meses 3 dias."}
+          </li>
+        <li>
+            <strong>{"DateTimeZone"}</strong> {' — '} {"timezone explícito evita bug de DST."}
+          </li>
+        <li>
+            <strong>{"format()"}</strong> {' — '} {"Y-m-d H:i:s — letras seguem strftime expandido."}
+          </li>
+        </ul>
+          <h2>O problema: imprimir &quot;agora&quot; em formato brasileiro</h2>
       <p>
         Toda aplicação web precisa, mais cedo ou mais tarde, mostrar a data atual. O cliente quer ver{" "}
         <code>21/03/2025 às 14h30</code>, não <code>1742565000</code>. Vamos do zero: o PHP guarda tempo

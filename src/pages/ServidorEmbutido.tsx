@@ -13,7 +13,28 @@ export default function ServidorEmbutido() {
       timeToRead="8 min"
       category="Instalação"
     >
-      <h2>Um servidor em uma linha</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"php -S"}</strong> {' — '} {"servidor de desenvolvimento embutido."}
+          </li>
+        <li>
+            <strong>{"Single threaded"}</strong> {' — '} {"serve 1 request por vez — só dev."}
+          </li>
+        <li>
+            <strong>{"Router"}</strong> {' — '} {"php -S 0.0.0.0:8000 router.php — front controller."}
+          </li>
+        <li>
+            <strong>{"Limitações"}</strong> {' — '} {"sem .htaccess, sem rewrite avançado."}
+          </li>
+        <li>
+            <strong>{"Uso"}</strong> {' — '} {"protótipos, REPL, testes locais."}
+          </li>
+        </ul>
+          <h2>Um servidor em uma linha</h2>
       <p>
         Antes de qualquer teoria, veja a coisa mais útil que você vai aprender hoje:
       </p>

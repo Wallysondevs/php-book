@@ -16,7 +16,25 @@ export default function Autoload() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/namespaces" className="text-[#8993BE] underline">Namespaces</a> e <a href="#/composer" className="text-[#8993BE] underline">Composer</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"spl_autoload_register"}</strong> {' — '} {"registra função chamada quando classe não encontrada."}
+          </li>
+        <li>
+            <strong>{"PSR-4"}</strong> {' — '} {"padrão moderno: namespace = pasta, classe = arquivo."}
+          </li>
+        <li>
+            <strong>{"Composer autoload"}</strong> {' — '} {"composer dump-autoload regenera o vendor/autoload.php."}
+          </li>
+        <li>
+            <strong>{"Optimized"}</strong> {' — '} {"composer dump-autoload -o pré-computa o mapa."}
+          </li>
+        <li>
+            <strong>{"Classmap"}</strong> {' — '} {"lista explícita de arquivo→classe; útil em deploy."}
+          </li>
+        </ul>
+    
       <p><strong className="text-[#8993BE] font-mono">autoload PSR-4</strong> — padrão da comunidade que mapeia <em>prefixo de namespace</em> para <em>pasta no disco</em>. Existe pra você nunca mais escrever <code>require</code> manual: <code>App\Models\User</code> vira <code>src/Models/User.php</code> automaticamente. Configurado na chave <code>autoload.psr-4</code> do <code>composer.json</code>.</p>
 
       <h2>O mundo sem autoload (e por que ele dói)</h2>

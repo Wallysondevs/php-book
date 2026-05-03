@@ -13,7 +13,28 @@ export default function CiCd() {
       timeToRead="13 min"
       category="Deploy"
     >
-      <h2>O que é CI, e por que GitHub Actions?</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"CI"}</strong> {' — '} {"Continuous Integration — build + testes a cada push."}
+          </li>
+        <li>
+            <strong>{"CD"}</strong> {' — '} {"Continuous Delivery/Deployment — deploy automático."}
+          </li>
+        <li>
+            <strong>{"GitHub Actions"}</strong> {' — '} {".github/workflows/*.yml define jobs."}
+          </li>
+        <li>
+            <strong>{"Cache"}</strong> {' — '} {"Composer cache acelera muito (~/.composer/cache)."}
+          </li>
+        <li>
+            <strong>{"Matrix"}</strong> {' — '} {"testa em múltiplas versões de PHP em paralelo."}
+          </li>
+        </ul>
+          <h2>O que é CI, e por que GitHub Actions?</h2>
       <p>
         <strong>CI (Continuous Integration)</strong> é um robô que, a cada push, baixa seu código,
         instala as dependências e roda os testes. Se algo quebra, o robô avisa <em>antes</em> do

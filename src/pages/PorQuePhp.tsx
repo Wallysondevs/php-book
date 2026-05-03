@@ -13,7 +13,28 @@ export default function PorQuePhp() {
       timeToRead="8 min"
       category="Introdução"
     >
-      <h2>O argumento que ninguém quer ouvir, mas é verdade</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Onipresente"}</strong> {' — '} {"roda em ~75% da web — WordPress, Wikipedia, Facebook (origem)."}
+          </li>
+        <li>
+            <strong>{"Curva baixa"}</strong> {' — '} {"do \"olá mundo\" ao app real em horas."}
+          </li>
+        <li>
+            <strong>{"Stateless por request"}</strong> {' — '} {"modelo que escala horizontalmente fácil."}
+          </li>
+        <li>
+            <strong>{"Composer + PSR"}</strong> {' — '} {"ecossistema maduro e padronizado."}
+          </li>
+        <li>
+            <strong>{"PHP 8+"}</strong> {' — '} {"tipos, JIT, enums, attributes — linguagem moderna."}
+          </li>
+        </ul>
+          <h2>O argumento que ninguém quer ouvir, mas é verdade</h2>
       <p>
         Toda vez que alguém pergunta “PHP ainda vale a pena?”, a resposta honesta é mostrar dois números:
       </p>

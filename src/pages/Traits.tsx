@@ -14,7 +14,25 @@ export default function Traits() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/classes" className="text-[#8993BE] underline">Classes e Objetos</a>, <a href="#/heranca" className="text-[#8993BE] underline">Herança</a> e <a href="#/interfaces" className="text-[#8993BE] underline">Interfaces</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"trait Nome"}</strong> {' — '} {"bloco de métodos reutilizável injetado em classes."}
+          </li>
+        <li>
+            <strong>{"use Trait;"}</strong> {' — '} {"dentro da classe importa os métodos."}
+          </li>
+        <li>
+            <strong>{"Conflito"}</strong> {' — '} {"use A, B { A::m insteadof B; } resolve métodos colidentes."}
+          </li>
+        <li>
+            <strong>{"vs herança"}</strong> {' — '} {"trait é composição horizontal; herança é vertical."}
+          </li>
+        <li>
+            <strong>{"Limites"}</strong> {' — '} {"sem $this próprio; estado compartilhado pode virar bagunça."}
+          </li>
+        </ul>
+    
       <p><strong className="text-[#8993BE] font-mono">trait</strong> — bloco de código (propriedades + métodos) que pode ser "colado" em várias classes via <code>use</code>. Existe pra compartilhar comportamento entre classes sem hierarquia comum. Não pode ser instanciada e não gera tipo. Sintaxe: <code>trait Nome {`{ ... }`}</code>; <code>class Foo {`{ use Nome; }`}</code>.</p>
 
       <h2>O problema: comportamento que aparece em classes não relacionadas</h2>

@@ -13,7 +13,28 @@ export default function Mocks() {
       timeToRead="13 min"
       category="Testes"
     >
-      <h2>O problema: testes que dependem do mundo</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Stub"}</strong> {' — '} {"substitui método para devolver valor fixo."}
+          </li>
+        <li>
+            <strong>{"Mock"}</strong> {' — '} {"verifica que método foi chamado com args certos."}
+          </li>
+        <li>
+            <strong>{"Spy"}</strong> {' — '} {"grava chamadas para inspeção posterior."}
+          </li>
+        <li>
+            <strong>{"Fake"}</strong> {' — '} {"implementação simplificada (ex: in-memory repo)."}
+          </li>
+        <li>
+            <strong>{"Fixture"}</strong> {' — '} {"dados de teste reutilizáveis."}
+          </li>
+        </ul>
+          <h2>O problema: testes que dependem do mundo</h2>
       <p>
         Você tem uma classe <code>Notificador</code> que envia e-mail. Para testar a lógica
         (formatar mensagem, escolher destinatário) você <em>não quer</em> mandar e-mail real. Quer

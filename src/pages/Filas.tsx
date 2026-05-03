@@ -13,7 +13,28 @@ export default function Filas() {
       timeToRead="13 min"
       category="Cache & Filas"
     >
-      <h2>O problema: o usuário está esperando</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Queue"}</strong> {' — '} {"mensagens persistidas para processamento assíncrono."}
+          </li>
+        <li>
+            <strong>{"Producer/Consumer"}</strong> {' — '} {"um lado publica, outro lê e processa."}
+          </li>
+        <li>
+            <strong>{"Backends"}</strong> {' — '} {"Redis, RabbitMQ, SQS, Beanstalkd, banco."}
+          </li>
+        <li>
+            <strong>{"Retry/DLQ"}</strong> {' — '} {"tentativas + Dead Letter Queue para mensagens insanáveis."}
+          </li>
+        <li>
+            <strong>{"Workers"}</strong> {' — '} {"processos PHP rodando em loop; supervisor para reiniciar."}
+          </li>
+        </ul>
+          <h2>O problema: o usuário está esperando</h2>
       <p>
         Imagine que o cadastro do seu site dispara um e-mail de boas-vindas via SMTP. Cada
         conexão SMTP demora 800ms a 2s. Multiplique por mais um webhook, geração de PDF e

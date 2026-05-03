@@ -13,7 +13,28 @@ export default function Versoes() {
       timeToRead="9 min"
       category="Introdução"
     >
-      <h2>Qual versão você deve usar agora</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Active support"}</strong> {' — '} {"2 anos de bugs + 1 ano só segurança."}
+          </li>
+        <li>
+            <strong>{"EOL"}</strong> {' — '} {"após 3 anos — atualize antes."}
+          </li>
+        <li>
+            <strong>{"php.net/supported-versions"}</strong> {' — '} {"tabela oficial sempre atualizada."}
+          </li>
+        <li>
+            <strong>{"Migração"}</strong> {' — '} {"use Rector + PHPStan para upgrades grandes."}
+          </li>
+        <li>
+            <strong>{"Composer platform"}</strong> {' — '} {"declare requirePHP em composer.json."}
+          </li>
+        </ul>
+          <h2>Qual versão você deve usar agora</h2>
       <p>
         Se você está começando um projeto hoje, a resposta é simples: <strong>PHP 8.4</strong>. Se a sua
         empresa ainda está em 8.1 ou 8.2, está tudo bem — são versões maduras. Se está em 7.x, você

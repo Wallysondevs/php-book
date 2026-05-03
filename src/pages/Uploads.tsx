@@ -13,7 +13,28 @@ export default function Uploads() {
       timeToRead="13 min"
       category="Arquivos & I/O"
     >
-      <h2>O ponto de partida: o formulário HTML</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"$_FILES"}</strong> {' — '} {"array com tmp_name, name, size, error."}
+          </li>
+        <li>
+            <strong>{"move_uploaded_file()"}</strong> {' — '} {"só move se foi upload real (verifica is_uploaded_file)."}
+          </li>
+        <li>
+            <strong>{"MIME"}</strong> {' — '} {"finfo_file detecta tipo real — não confie em $_FILES[\"type\"]."}
+          </li>
+        <li>
+            <strong>{"Limites"}</strong> {' — '} {"upload_max_filesize e post_max_size no php.ini."}
+          </li>
+        <li>
+            <strong>{"Segurança"}</strong> {' — '} {"nunca aceite extensões executáveis; randomize nome."}
+          </li>
+        </ul>
+          <h2>O ponto de partida: o formulário HTML</h2>
       <p>
         O navegador só envia um arquivo se o formulário tiver{" "}
         <code>enctype=&quot;multipart/form-data&quot;</code> e o input for{" "}

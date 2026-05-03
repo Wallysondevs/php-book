@@ -13,7 +13,28 @@ export default function Opcache() {
       timeToRead="13 min"
       category="Performance"
     >
-      <h2>O problema: a cada request, PHP recompila tudo</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"OPcache"}</strong> {' — '} {"cache de bytecode — evita reparse a cada request."}
+          </li>
+        <li>
+            <strong>{"opcache.enable"}</strong> {' — '} {"liga; já vem ativo nos pacotes oficiais."}
+          </li>
+        <li>
+            <strong>{"preload (7.4+)"}</strong> {' — '} {"carrega arquivos no startup do FPM."}
+          </li>
+        <li>
+            <strong>{"validate_timestamps"}</strong> {' — '} {"em prod desligue para ganho extra (precisa reload no deploy)."}
+          </li>
+        <li>
+            <strong>{"JIT (8.0+)"}</strong> {' — '} {"compila para máquina; ganho real em CPU-bound."}
+          </li>
+        </ul>
+          <h2>O problema: a cada request, PHP recompila tudo</h2>
       <p>
         Por padrão, sempre que uma requisição chega, o PHP <strong>lê o arquivo do disco,
         faz lexing, parsing, compila para opcodes e só então executa</strong>. Esse trabalho

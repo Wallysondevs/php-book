@@ -15,7 +15,25 @@ export default function Funcoes() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/variaveis" className="text-[#8993BE] underline">Variáveis</a>, <a href="#/operadores" className="text-[#8993BE] underline">Operadores</a>, <a href="#/if-else" className="text-[#8993BE] underline">if / elseif / else</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"function nome()"}</strong> {' — '} {"declaração; PHP é case-insensitive para nomes de função."}
+          </li>
+        <li>
+            <strong>{"Tipo de retorno"}</strong> {' — '} {"function f(): int — declarado depois dos parênteses."}
+          </li>
+        <li>
+            <strong>{"Parâmetro default"}</strong> {' — '} {"$x = 10 — torna o argumento opcional."}
+          </li>
+        <li>
+            <strong>{"Variádicos"}</strong> {' — '} {"function f(...$args) — recebe N argumentos como array."}
+          </li>
+        <li>
+            <strong>{"Funções anônimas"}</strong> {' — '} {"closures criadas com function() use ($var) {...}."}
+          </li>
+        </ul>
+    
       <p><strong className="text-[#8993BE] font-mono">function</strong> — declara uma função (bloco de código nomeado e reutilizável). Existe para você não copiar-e-colar a mesma lógica em três lugares. Sintaxe: <code>{`function nome(params): tipo { ... }`}</code>. O nome segue as mesmas regras de variável (sem o <code>$</code>) e funções em PHP são case-insensitive.</p>
 
       <p><strong className="text-[#8993BE] font-mono">return</strong> — devolve um valor para quem chamou a função e <strong>encerra a execução imediatamente</strong>. Tudo depois de um <code>return</code> que disparou é ignorado. Sem <code>return</code> (ou usando ele sozinho), a função devolve <code>null</code>.</p>

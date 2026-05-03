@@ -12,7 +12,28 @@ export default function RegexAvancado() {
       timeToRead="14 min"
       category="Regex"
     >
-      <h2>O problema: extrair partes nomeadas, não numeradas</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Lookahead/behind"}</strong> {' — '} {"(?=...) e (?<=...) — afirmações sem consumir."}
+          </li>
+        <li>
+            <strong>{"Backreference"}</strong> {' — '} {"\\\\1 ou (?P<n>...) com (?P=n)."}
+          </li>
+        <li>
+            <strong>{"Quantificadores"}</strong> {' — '} {"? * + {n,m} e a versão lazy ?? *? +?."}
+          </li>
+        <li>
+            <strong>{"Grupos não-captura"}</strong> {' — '} {"(?:...) — agrupa sem armazenar."}
+          </li>
+        <li>
+            <strong>{"preg_replace_callback"}</strong> {' — '} {"usa função para construir o replacement."}
+          </li>
+        </ul>
+          <h2>O problema: extrair partes nomeadas, não numeradas</h2>
       <p>
         Você está parseando logs e quer extrair <code>data</code>, <code>nivel</code> e{" "}
         <code>mensagem</code>. Com grupos numerados (<code>$m[1]</code>, <code>$m[2]</code>) o código

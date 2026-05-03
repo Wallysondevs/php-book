@@ -13,7 +13,28 @@ export default function Migrations() {
       timeToRead="13 min"
       category="Banco Avançado"
     >
-      <h2>O problema: alguém rodou um ALTER TABLE em produção</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Migration"}</strong> {' — '} {"arquivo versionado com mudança de schema."}
+          </li>
+        <li>
+            <strong>{"up / down"}</strong> {' — '} {"aplicar / reverter."}
+          </li>
+        <li>
+            <strong>{"Idempotência"}</strong> {' — '} {"rodar 2x não deve quebrar nem duplicar."}
+          </li>
+        <li>
+            <strong>{"Tools"}</strong> {' — '} {"Phinx, Doctrine Migrations, Laravel Artisan."}
+          </li>
+        <li>
+            <strong>{"Order"}</strong> {' — '} {"timestamp no nome garante ordem de execução."}
+          </li>
+        </ul>
+          <h2>O problema: alguém rodou um ALTER TABLE em produção</h2>
       <p>
         Você puxa o último <code>git pull</code>, sobe a aplicação e ela quebra: a coluna{" "}
         <code>users.last_login_at</code> não existe no seu banco local. Quem criou? Quando? Como replicar

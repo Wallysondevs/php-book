@@ -14,7 +14,25 @@ export default function Loops() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/operadores" className="text-[#8993BE] underline">Operadores</a>, <a href="#/arrays" className="text-[#8993BE] underline">Arrays</a>, <a href="#/if-else" className="text-[#8993BE] underline">if / elseif / else</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"for"}</strong> {' — '} {"controle clássico com inicialização, condição e incremento."}
+          </li>
+        <li>
+            <strong>{"while / do-while"}</strong> {' — '} {"while testa antes; do-while garante 1 execução."}
+          </li>
+        <li>
+            <strong>{"foreach"}</strong> {' — '} {"itera arrays e objetos iteráveis; pode pegar chave => valor."}
+          </li>
+        <li>
+            <strong>{"break N / continue N"}</strong> {' — '} {"sai de N níveis aninhados ou pula para próxima iteração."}
+          </li>
+        <li>
+            <strong>{"Por referência"}</strong> {' — '} {"foreach ($a as &$v) — alterações em $v afetam o array."}
+          </li>
+        </ul>
+    
       <p><strong className="text-[#8993BE] font-mono">foreach</strong> — itera sobre arrays e qualquer coisa <code>iterable</code>. Existe porque iterar com índice à mão é chato e propenso a erro. Sintaxe: <code>{`foreach ($arr as $valor) { ... }`}</code> ou <code>{`foreach ($arr as $chave => $valor) { ... }`}</code> quando você precisa também da chave.</p>
 
       <h2>foreach: o loop que você usa 95% das vezes</h2>

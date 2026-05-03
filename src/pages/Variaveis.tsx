@@ -15,7 +15,25 @@ export default function Variaveis() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/sintaxe" className="text-[#8993BE] underline">Sintaxe básica</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"$nome"}</strong> {' — '} {"toda variável começa com $ seguido de letra ou _; é case-sensitive."}
+          </li>
+        <li>
+            <strong>{"Escopo local"}</strong> {' — '} {"variáveis dentro de função NÃO enxergam as de fora — diferente de Python ou JS."}
+          </li>
+        <li>
+            <strong>{"global $x"}</strong> {' — '} {"palavra-chave que importa variável do escopo global para dentro da função."}
+          </li>
+        <li>
+            <strong>{"static $x"}</strong> {' — '} {"preserva o valor entre chamadas da mesma função."}
+          </li>
+        <li>
+            <strong>{"unset() / isset()"}</strong> {' — '} {"destrói uma variável / verifica se existe e não é null."}
+          </li>
+        </ul>
+    
       <h2>O cifrão não é decoração</h2>
       <p>
         Em PHP, <strong>toda variável começa com <code>$</code></strong>. Isso não é estilo:

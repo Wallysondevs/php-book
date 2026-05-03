@@ -13,7 +13,28 @@ export default function Timezones() {
       timeToRead="12 min"
       category="Datas & Tempo"
     >
-      <h2>O sintoma: as datas estão 3 horas adiantadas</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"UTC sempre internamente"}</strong> {' — '} {"guarde em UTC; converta só na exibição."}
+          </li>
+        <li>
+            <strong>{"date_default_timezone_set"}</strong> {' — '} {"define padrão; evita warnings."}
+          </li>
+        <li>
+            <strong>{"DateTimeZone"}</strong> {' — '} {"aceita \"America/Sao_Paulo\" (não BRT — BRT muda em DST)."}
+          </li>
+        <li>
+            <strong>{"DST"}</strong> {' — '} {"horário de verão; bug clássico em datas históricas."}
+          </li>
+        <li>
+            <strong>{"Banco"}</strong> {' — '} {"TIMESTAMP em UTC, exibição em local."}
+          </li>
+        </ul>
+          <h2>O sintoma: as datas estão 3 horas adiantadas</h2>
       <p>
         Você sobe sua API em produção (provavelmente um container Linux com fuso UTC), grava{" "}
         <code>now()</code> no banco e quando o usuário em São Paulo abre o app, vê uma hora a mais do

@@ -13,7 +13,28 @@ export default function Profiling() {
       timeToRead="13 min"
       category="Performance"
     >
-      <h2>O problema: você acha que sabe onde está lento</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Xdebug"}</strong> {' — '} {"debug + profiler clássico; lento mas detalhado."}
+          </li>
+        <li>
+            <strong>{"Blackfire"}</strong> {' — '} {"profiler comercial sem overhead em prod."}
+          </li>
+        <li>
+            <strong>{"Tideways"}</strong> {' — '} {"alternativa com APM."}
+          </li>
+        <li>
+            <strong>{"xhprof"}</strong> {' — '} {"profiler leve — bom para sampling."}
+          </li>
+        <li>
+            <strong>{"Hot path"}</strong> {' — '} {"foque nas funções com maior tempo exclusivo."}
+          </li>
+        </ul>
+          <h2>O problema: você acha que sabe onde está lento</h2>
       <p>
         Toda vez que um endpoint fica lento, o instinto é abrir o código e tentar
         adivinhar. <em>"Deve ser aquele JOIN..."</em>, <em>"Acho que é o cache..."</em>.

@@ -12,7 +12,28 @@ export default function Historia() {
       timeToRead="10 min"
       category="Introdução"
     >
-      <h2>1994: o currículo de Rasmus</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"1995"}</strong> {' — '} {"Rasmus Lerdorf: Personal Home Page."}
+          </li>
+        <li>
+            <strong>{"PHP 3 (1998)"}</strong> {' — '} {"reescrita por Zeev Suraski e Andi Gutmans."}
+          </li>
+        <li>
+            <strong>{"PHP 5 (2004)"}</strong> {' — '} {"OOP de verdade."}
+          </li>
+        <li>
+            <strong>{"PHP 7 (2015)"}</strong> {' — '} {"pulo enorme de performance (Zend Engine 3)."}
+          </li>
+        <li>
+            <strong>{"PHP 8 (2020)"}</strong> {' — '} {"JIT, union types, attributes, named args, enums."}
+          </li>
+        </ul>
+          <h2>1994: o currículo de Rasmus</h2>
       <p>
         Tudo começou quando o dinamarquês-canadense <strong>Rasmus Lerdorf</strong> precisava de algo
         simples: contar quantas pessoas visitavam a página do currículo dele. Ele escreveu uns scripts

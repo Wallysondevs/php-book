@@ -12,7 +12,28 @@ export default function Otimizacoes() {
       timeToRead="13 min"
       category="Performance"
     >
-      <h2>O inimigo número 1: o problema N+1</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Mensure first"}</strong> {' — '} {"profile antes de otimizar; chute = bug."}
+          </li>
+        <li>
+            <strong>{"OPcache + JIT"}</strong> {' — '} {"ganho global gratuito."}
+          </li>
+        <li>
+            <strong>{"Cache de resultados"}</strong> {' — '} {"memoize chamadas caras (Redis, APCu)."}
+          </li>
+        <li>
+            <strong>{"Lazy loading"}</strong> {' — '} {"evite carregar dados desnecessários."}
+          </li>
+        <li>
+            <strong>{"Algoritmo > micro-opt"}</strong> {' — '} {"O(n) → O(log n) ganha mais que truques."}
+          </li>
+        </ul>
+          <h2>O inimigo número 1: o problema N+1</h2>
       <p>
         Você lista 100 pedidos e, para cada um, busca o cliente em uma query separada. Resultado:
         <strong> 1 query da listagem + 100 queries dos clientes = 101 round-trips no banco</strong>.

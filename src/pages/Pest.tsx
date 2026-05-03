@@ -13,7 +13,28 @@ export default function Pest() {
       timeToRead="12 min"
       category="Testes"
     >
-      <h2>O problema: PHPUnit é verboso</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Pest"}</strong> {' — '} {"DSL elegante em cima do PHPUnit."}
+          </li>
+        <li>
+            <strong>{"it(\"...\", fn() => ...)"}</strong> {' — '} {"sintaxe expressiva inspirada no Jest."}
+          </li>
+        <li>
+            <strong>{"expect()"}</strong> {' — '} {"API fluente: expect($x)->toBe(1)->toBeInt()."}
+          </li>
+        <li>
+            <strong>{"Higher Order"}</strong> {' — '} {"encadeia testes sem bloco: it()->expect()->toBe()."}
+          </li>
+        <li>
+            <strong>{"Plugins"}</strong> {' — '} {"pest-faker, pest-laravel, parallel, mutation."}
+          </li>
+        </ul>
+          <h2>O problema: PHPUnit é verboso</h2>
       <p>
         Em PHPUnit, escrever um teste simples exige uma classe, um namespace, um <code>extends TestCase</code>,
         um método com prefixo <code>test_</code> e um <code>$this-&gt;</code>. Para algo que conceitualmente

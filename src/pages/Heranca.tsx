@@ -14,7 +14,25 @@ export default function Heranca() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/classes" className="text-[#8993BE] underline">Classes e Objetos</a> e <a href="#/visibilidade" className="text-[#8993BE] underline">Visibilidade</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"extends"}</strong> {' — '} {"class Filha extends Pai — herda métodos e propriedades."}
+          </li>
+        <li>
+            <strong>{"parent::"}</strong> {' — '} {"invoca método da superclasse explicitamente."}
+          </li>
+        <li>
+            <strong>{"final"}</strong> {' — '} {"final class ou final function — proíbe extensão/override."}
+          </li>
+        <li>
+            <strong>{"Override"}</strong> {' — '} {"redefinir um método da pai com mesma assinatura."}
+          </li>
+        <li>
+            <strong>{"LSP"}</strong> {' — '} {"Liskov: filha deve poder substituir pai sem quebrar contratos."}
+          </li>
+        </ul>
+    
       <p><strong className="text-[#8993BE] font-mono">extends</strong> — declara que uma classe herda propriedades e métodos de outra (a "pai"). Existe pra reaproveitar código quando há relação clara <em>"é um"</em>. Sintaxe: <code>class Filha extends Pai {`{}`}</code>. Cada classe só pode estender uma única classe.</p>
 
       <p><strong className="text-[#8993BE] font-mono">parent</strong> — palavra-chave que se refere à classe pai dentro de uma filha, sempre usada com <code>::</code>. Existe pra você poder chamar a versão original do método que sobrescreveu. Sintaxe: <code>parent::__construct(...)</code>, <code>parent::metodo()</code>.</p>

@@ -16,7 +16,25 @@ export default function Composer() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/instalacao" className="text-[#8993BE] underline">Instalação do PHP</a>, <a href="#/php-cli" className="text-[#8993BE] underline">PHP CLI</a> e <a href="#/namespaces" className="text-[#8993BE] underline">Namespaces</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"composer.json"}</strong> {' — '} {"manifesto: dependências, autoload, scripts."}
+          </li>
+        <li>
+            <strong>{"composer.lock"}</strong> {' — '} {"congela versões exatas para reproduzibilidade."}
+          </li>
+        <li>
+            <strong>{"require / require-dev"}</strong> {' — '} {"produção / só desenvolvimento."}
+          </li>
+        <li>
+            <strong>{"vendor/"}</strong> {' — '} {"pasta gerada com bibliotecas baixadas."}
+          </li>
+        <li>
+            <strong>{"Versões semver"}</strong> {' — '} {"^1.2 = >=1.2 <2.0; ~1.2 = >=1.2 <1.3."}
+          </li>
+        </ul>
+    
       <p><strong className="text-[#8993BE] font-mono">require</strong> (no <code>composer.json</code>) — seção que lista pacotes necessários para sua aplicação rodar em produção. Existe pra separar dependências de runtime das de desenvolvimento. Sintaxe (CLI): <code>composer require vendor/pacote</code>; grava no <code>composer.json</code> e instala em <code>vendor/</code>.</p>
 
       <p><strong className="text-[#8993BE] font-mono">require-dev</strong> — seção (e flag <code>--dev</code>) para pacotes usados só em dev: PHPUnit, PHPStan, Rector. Existe pra não inflar o deploy. Sintaxe: <code>composer require --dev phpunit/phpunit</code>. Em produção, instale com <code>composer install --no-dev</code>.</p>

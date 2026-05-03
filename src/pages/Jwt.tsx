@@ -13,7 +13,28 @@ export default function Jwt() {
       timeToRead="13 min"
       category="Segurança"
     >
-      <h2>O que é JWT (e o que ele NÃO é)</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"JWT"}</strong> {' — '} {"JSON Web Token — header.payload.signature em base64url."}
+          </li>
+        <li>
+            <strong>{"HS256 vs RS256"}</strong> {' — '} {"simétrico (segredo) vs assimétrico (par de chaves)."}
+          </li>
+        <li>
+            <strong>{"Claims"}</strong> {' — '} {"iss, sub, exp, iat — campos padronizados do payload."}
+          </li>
+        <li>
+            <strong>{"Stateless"}</strong> {' — '} {"servidor não guarda sessão; tudo está no token."}
+          </li>
+        <li>
+            <strong>{"Refresh token"}</strong> {' — '} {"token longo para renovar o access token curto."}
+          </li>
+        </ul>
+          <h2>O que é JWT (e o que ele NÃO é)</h2>
       <p>
         Um JSON Web Token é uma string compacta dividida em três partes separadas
         por ponto: <code>header.payload.signature</code>. Header e payload são

@@ -15,7 +15,25 @@ export default function Argumentos() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/funcoes" className="text-[#8993BE] underline">Funções básicas</a>, <a href="#/type-hints" className="text-[#8993BE] underline">Type hints</a>, <a href="#/arrow-functions" className="text-[#8993BE] underline">Arrow functions</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Posicionais"}</strong> {' — '} {"passados na ordem: f(1, 2, 3)."}
+          </li>
+        <li>
+            <strong>{"Nomeados (PHP 8)"}</strong> {' — '} {"f(nome: \"Ana\", idade: 30) — independem da ordem."}
+          </li>
+        <li>
+            <strong>{"Spread"}</strong> {' — '} {"f(...$array) — desempacota array em argumentos."}
+          </li>
+        <li>
+            <strong>{"By value vs reference"}</strong> {' — '} {"function f(&$x) — modificações dentro afetam o original."}
+          </li>
+        <li>
+            <strong>{"Type hints"}</strong> {' — '} {"function f(int $x, ?string $y) — validados em runtime."}
+          </li>
+        </ul>
+    
       <h2>O problema: assinaturas que crescem fora de controle</h2>
       <p>
         Quando uma função aceita 5 ou 6 parâmetros, lembrar a ordem certa de cada um vira pesadelo.

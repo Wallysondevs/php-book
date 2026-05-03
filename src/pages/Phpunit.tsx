@@ -13,7 +13,28 @@ export default function Phpunit() {
       timeToRead="14 min"
       category="Testes"
     >
-      <h2>Por que PHPUnit?</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Test case"}</strong> {' — '} {"classe estende TestCase; métodos test* viram testes."}
+          </li>
+        <li>
+            <strong>{"Assertions"}</strong> {' — '} {"assertEquals, assertSame, assertCount, assertInstanceOf."}
+          </li>
+        <li>
+            <strong>{"Setup/teardown"}</strong> {' — '} {"setUp() roda antes de cada teste; tearDown() depois."}
+          </li>
+        <li>
+            <strong>{"DataProvider"}</strong> {' — '} {"método que devolve casos para parametrizar testes."}
+          </li>
+        <li>
+            <strong>{"Mock"}</strong> {' — '} {"createMock(Class::class)->method(...)->willReturn(...)."}
+          </li>
+        </ul>
+          <h2>Por que PHPUnit?</h2>
       <p>
         Você acabou de implementar uma função que calcula desconto. Roda no navegador, parece certo.
         Daqui a três meses um colega mexe em outra parte do código e seu desconto começa a vir negativo.

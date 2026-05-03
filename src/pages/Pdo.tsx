@@ -16,7 +16,25 @@ export default function Pdo() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/classes" className="text-[#8993BE] underline">Classes</a>, <a href="#/exceptions" className="text-[#8993BE] underline">Try/Catch</a>, <a href="#/namespaces" className="text-[#8993BE] underline">Namespaces</a> e <a href="#/composer" className="text-[#8993BE] underline">Composer</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"PDO"}</strong> {' — '} {"PHP Data Objects — abstração unificada para múltiplos bancos."}
+          </li>
+        <li>
+            <strong>{"DSN"}</strong> {' — '} {"string de conexão: \"mysql:host=...;dbname=...\""}
+          </li>
+        <li>
+            <strong>{"Prepared statements"}</strong> {' — '} {"separa SQL de dados — anti SQL injection."}
+          </li>
+        <li>
+            <strong>{"fetch / fetchAll"}</strong> {' — '} {"lê 1 linha / todas; modos FETCH_ASSOC, FETCH_OBJ."}
+          </li>
+        <li>
+            <strong>{"ATTR_ERRMODE"}</strong> {' — '} {"PDO::ERRMODE_EXCEPTION força exceções em erros."}
+          </li>
+        </ul>
+    
       <p><strong className="text-[#8993BE] font-mono">PDO</strong> — classe nativa <em>PHP Data Objects</em>: camada uniforme de acesso a banco que fala SQLite, MySQL, PostgreSQL, SQL Server e mais. Existe pra padronizar a API e suportar prepared statements de verdade. Sintaxe: <code>$pdo = new PDO($dsn, $user, $pass, $options);</code>.</p>
 
       <p><strong className="text-[#8993BE] font-mono">FETCH_ASSOC</strong> — constante <code>PDO::FETCH_ASSOC</code> que faz cada linha voltar como array associativo (chave = nome da coluna). Existe pra evitar índices duplicados e código mais legível. Sintaxe: <code>$stmt-&gt;fetch(PDO::FETCH_ASSOC);</code> ou definido global como <code>ATTR_DEFAULT_FETCH_MODE</code>.</p>

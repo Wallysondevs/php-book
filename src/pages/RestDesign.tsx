@@ -14,7 +14,28 @@ export default function RestDesign() {
       timeToRead="14 min"
       category="APIs REST"
     >
-      <h2>O problema: APIs que parecem RPC disfarçado</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"REST"}</strong> {' — '} {"Representational State Transfer — recursos via HTTP."}
+          </li>
+        <li>
+            <strong>{"Verbos"}</strong> {' — '} {"GET ler, POST criar, PUT/PATCH atualizar, DELETE remover."}
+          </li>
+        <li>
+            <strong>{"Status codes"}</strong> {' — '} {"2xx ok, 4xx culpa do client, 5xx culpa do servidor."}
+          </li>
+        <li>
+            <strong>{"HATEOAS"}</strong> {' — '} {"respostas trazem links de próximas ações."}
+          </li>
+        <li>
+            <strong>{"Versionamento"}</strong> {' — '} {"/v1/, header Accept ou subdomínio."}
+          </li>
+        </ul>
+          <h2>O problema: APIs que parecem RPC disfarçado</h2>
       <p>
         Quase toda API ruim que você já viu segue o mesmo anti-padrão:
         rotas como <code>/getUser?id=42</code>, <code>/createOrder</code>, <code>/deleteAllSessions</code>,

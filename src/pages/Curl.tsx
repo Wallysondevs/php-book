@@ -12,7 +12,28 @@ export default function Curl() {
       timeToRead="13 min"
       category="HTTP Cliente"
     >
-      <h2>O problema: PHP precisa falar com APIs</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"curl_init"}</strong> {' — '} {"inicia handle de requisição."}
+          </li>
+        <li>
+            <strong>{"CURLOPT_*"}</strong> {' — '} {"opções: URL, RETURNTRANSFER, POSTFIELDS, HEADERS."}
+          </li>
+        <li>
+            <strong>{"curl_exec"}</strong> {' — '} {"executa e devolve body (ou true)."}
+          </li>
+        <li>
+            <strong>{"curl_multi_*"}</strong> {' — '} {"paraleliza requisições."}
+          </li>
+        <li>
+            <strong>{"CURLOPT_SSL_VERIFYPEER"}</strong> {' — '} {"NUNCA desabilite em produção."}
+          </li>
+        </ul>
+          <h2>O problema: PHP precisa falar com APIs</h2>
       <p>
         Você precisa consumir uma API REST, postar para um webhook, fazer upload de uma imagem
         para um S3 compatível. O PHP traz cURL embutido (extensão <code>ext-curl</code>, ativada

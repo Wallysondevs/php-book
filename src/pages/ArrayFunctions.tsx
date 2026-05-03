@@ -14,7 +14,25 @@ export default function ArrayFunctions() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/variaveis" className="text-[#8993BE] underline">Variáveis</a>, <a href="#/tipos" className="text-[#8993BE] underline">Tipos</a>, <a href="#/arrays" className="text-[#8993BE] underline">Arrays</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"array_map"}</strong> {' — '} {"aplica callback em cada elemento."}
+          </li>
+        <li>
+            <strong>{"array_filter"}</strong> {' — '} {"mantém elementos que passam no teste."}
+          </li>
+        <li>
+            <strong>{"array_reduce"}</strong> {' — '} {"reduz array a um único valor."}
+          </li>
+        <li>
+            <strong>{"array_merge vs +"}</strong> {' — '} {"merge concatena/sobrescreve por chave; + une preservando primeiras chaves."}
+          </li>
+        <li>
+            <strong>{"in_array / array_search"}</strong> {' — '} {"verifica/encontra valor; use === como 3º arg."}
+          </li>
+        </ul>
+    
       <h2>O básico antes do avançado</h2>
       <p>
         Você já sabe iterar com <code>foreach</code>. Tudo que vamos ver aqui pode ser feito com loop manual —

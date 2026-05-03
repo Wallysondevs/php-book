@@ -13,7 +13,28 @@ export default function Psr3Logger() {
       timeToRead="13 min"
       category="PSR Standards"
     >
-      <h2>O problema: cada lib quer seu próprio jeito de logar</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"LoggerInterface"}</strong> {' — '} {"PSR-3 — interface comum de log."}
+          </li>
+        <li>
+            <strong>{"Níveis"}</strong> {' — '} {"debug, info, notice, warning, error, critical, alert, emergency."}
+          </li>
+        <li>
+            <strong>{"Context"}</strong> {' — '} {"array associativo; placeholders {nome} no msg."}
+          </li>
+        <li>
+            <strong>{"Monolog"}</strong> {' — '} {"implementação dominante; handlers para arquivo, slack, sentry."}
+          </li>
+        <li>
+            <strong>{"Adapter pattern"}</strong> {' — '} {"troque implementação sem tocar no código que usa."}
+          </li>
+        </ul>
+          <h2>O problema: cada lib quer seu próprio jeito de logar</h2>
       <p>
         Sem padrão, sua aplicação termina com Symfony usando um objeto, Laravel outro, sua{" "}
         <code>App\Logger</code> outro, e a SDK da AWS um quarto. A <strong>PSR-3</strong> resolveu

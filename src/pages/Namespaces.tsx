@@ -16,7 +16,25 @@ export default function Namespaces() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/classes" className="text-[#8993BE] underline">Classes e Objetos</a>, <a href="#/funcoes" className="text-[#8993BE] underline">Funções</a> e <a href="#/interfaces" className="text-[#8993BE] underline">Interfaces</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"namespace App\\\\Module;"}</strong> {' — '} {"agrupa classes em pacotes lógicos para evitar colisão."}
+          </li>
+        <li>
+            <strong>{"use"}</strong> {' — '} {"use App\\\\Foo; — importa nome para o escopo do arquivo."}
+          </li>
+        <li>
+            <strong>{"as"}</strong> {' — '} {"use Foo as Bar; — apelida."}
+          </li>
+        <li>
+            <strong>{"Fully qualified"}</strong> {' — '} {"\\\\Acme\\\\Foo — caminho absoluto, ignora aliases."}
+          </li>
+        <li>
+            <strong>{"PSR-4"}</strong> {' — '} {"mapeia namespace → diretório no Composer."}
+          </li>
+        </ul>
+    
       <p><strong className="text-[#8993BE] font-mono">namespace</strong> — declara um prefixo lógico que agrupa classes, funções e constantes do arquivo. Existe pra evitar colisão de nomes em projetos grandes e em pacotes de terceiros. Sintaxe (primeira instrução do arquivo): <code>namespace App\Models;</code>. Aceita sub-níveis separados por <code>\</code>.</p>
 
       <p><strong className="text-[#8993BE] font-mono">use</strong> — importa um símbolo (classe, função, constante) de outro namespace para o escopo do arquivo, evitando escrever o FQN completo. Sintaxe: <code>use App\Models\User;</code>. Pode importar em grupo: <code>use App\Models\{`{User, Product}`};</code>.</p>

@@ -12,7 +12,28 @@ export default function Reflection() {
       timeToRead="13 min"
       category="Reflection & Meta"
     >
-      <h2>O problema: quero instanciar uma classe sem saber o que ela precisa</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"ReflectionClass"}</strong> {' — '} {"inspeciona métodos, props e atributos em runtime."}
+          </li>
+        <li>
+            <strong>{"ReflectionMethod"}</strong> {' — '} {"pega assinatura e invoca métodos privados."}
+          </li>
+        <li>
+            <strong>{"Performance"}</strong> {' — '} {"reflection é cara — evite em hot paths."}
+          </li>
+        <li>
+            <strong>{"Uso típico"}</strong> {' — '} {"frameworks de DI, ORMs e serializers."}
+          </li>
+        <li>
+            <strong>{"Atributos (8.0)"}</strong> {' — '} {"#[Attr] é lido via getAttributes()."}
+          </li>
+        </ul>
+          <h2>O problema: quero instanciar uma classe sem saber o que ela precisa</h2>
       <p>
         Imagine escrever um container de injeção de dependências. Você recebe o nome de uma classe e
         precisa instanciá-la, descobrindo automaticamente o que o construtor pede. Sem reflexão,

@@ -13,7 +13,28 @@ export default function Psr7Http() {
       timeToRead="14 min"
       category="PSR Standards"
     >
-      <h2>O problema: cada framework tem seu próprio Request</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"ServerRequestInterface"}</strong> {' — '} {"representa request HTTP imutável."}
+          </li>
+        <li>
+            <strong>{"ResponseInterface"}</strong> {' — '} {"response também imutável; with* devolve nova."}
+          </li>
+        <li>
+            <strong>{"StreamInterface"}</strong> {' — '} {"body como stream — lazy e eficiente."}
+          </li>
+        <li>
+            <strong>{"UriInterface"}</strong> {' — '} {"parse e manipulação de URL."}
+          </li>
+        <li>
+            <strong>{"Implementations"}</strong> {' — '} {"Nyholm, Guzzle PSR-7, Slim PSR-7."}
+          </li>
+        </ul>
+          <h2>O problema: cada framework tem seu próprio Request</h2>
       <p>
         Antes da PSR-7, o <code>Request</code> do Symfony não conversava com o do Laravel, que não
         conversava com o da SDK da AWS. Trocar de stack era reescrever toda a camada HTTP. A{" "}

@@ -16,7 +16,25 @@ export default function Sintaxe() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Nenhum — pode começar por aqui! É o primeiro capítulo do livro.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"<?php"}</strong> {' — '} {"tag de abertura — diz ao interpretador que o que vem a seguir é código PHP. Pode ser misturado a HTML."}
+          </li>
+        <li>
+            <strong>{"?>"}</strong> {' — '} {"tag de fechamento — opcional em arquivos puramente PHP; omitir evita whitespace acidental."}
+          </li>
+        <li>
+            <strong>{"echo / print"}</strong> {' — '} {"imprimem strings; echo aceita múltiplos args, print retorna 1."}
+          </li>
+        <li>
+            <strong>{"; (ponto-e-vírgula)"}</strong> {' — '} {"finaliza cada statement; esquecer dispara erro de parse."}
+          </li>
+        <li>
+            <strong>{"// /* */ #"}</strong> {' — '} {"as três formas de comentário; # é estilo shell."}
+          </li>
+        </ul>
+    
       <h2>O modelo mental: PHP é um pré-processador de HTML</h2>
       <p>
         Diferente de Python ou Node, o PHP foi desenhado para <strong>ser embutido em HTML</strong>.

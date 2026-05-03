@@ -12,7 +12,28 @@ export default function Generators() {
       timeToRead="13 min"
       category="SPL & Iteradores"
     >
-      <h2>O problema: array gigante = RAM gigante</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"yield"}</strong> {' — '} {"pausa a função e devolve valor; retoma na próxima iteração."}
+          </li>
+        <li>
+            <strong>{"Lazy"}</strong> {' — '} {"gera valores sob demanda — economia de memória em datasets enormes."}
+          </li>
+        <li>
+            <strong>{"yield from"}</strong> {' — '} {"delega a outro generator/iterable."}
+          </li>
+        <li>
+            <strong>{"Generator::send()"}</strong> {' — '} {"envia valor de volta para dentro do yield."}
+          </li>
+        <li>
+            <strong>{"vs array"}</strong> {' — '} {"generator não materializa tudo; só funciona para iteração unidirecional."}
+          </li>
+        </ul>
+          <h2>O problema: array gigante = RAM gigante</h2>
       <p>
         Suponha que você precisa processar um log de 5 GB. A abordagem ingênua —{" "}
         <code>file($caminho)</code> — carrega tudo na memória e mata o processo com{" "}

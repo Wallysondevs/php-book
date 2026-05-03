@@ -13,7 +13,28 @@ export default function Memcached() {
       timeToRead="11 min"
       category="Cache & Filas"
     >
-      <h2>O problema: o Redis é demais para o que você precisa</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Memcached"}</strong> {' — '} {"cache distribuído em memória; só key-value simples."}
+          </li>
+        <li>
+            <strong>{"vs Redis"}</strong> {' — '} {"mais simples, multi-thread; sem persistência nem pub/sub."}
+          </li>
+        <li>
+            <strong>{"Consistent hashing"}</strong> {' — '} {"distribui chaves entre nós minimizando re-shard."}
+          </li>
+        <li>
+            <strong>{"CAS"}</strong> {' — '} {"compare-and-swap para evitar race conditions."}
+          </li>
+        <li>
+            <strong>{"ext-memcached"}</strong> {' — '} {"extensão oficial; não confunda com ext-memcache (deprecada)."}
+          </li>
+        </ul>
+          <h2>O problema: o Redis é demais para o que você precisa</h2>
       <p>
         Você quer só guardar respostas de API por 60 segundos. Não precisa de listas, sets, hashes,
         pub/sub, persistência em disco, replicação. Só <strong>chave → valor → TTL</strong>. Para isso o

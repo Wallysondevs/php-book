@@ -15,7 +15,25 @@ export default function Exceptions() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/funcoes" className="text-[#8993BE] underline">Funções</a>, <a href="#/classes" className="text-[#8993BE] underline">Classes</a> e <a href="#/heranca" className="text-[#8993BE] underline">Herança</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"throw new Exception()"}</strong> {' — '} {"dispara erro recuperável."}
+          </li>
+        <li>
+            <strong>{"try/catch/finally"}</strong> {' — '} {"captura, trata e roda cleanup."}
+          </li>
+        <li>
+            <strong>{"Hierarquia"}</strong> {' — '} {"Throwable > {Error, Exception} — Error costuma ser fatal."}
+          </li>
+        <li>
+            <strong>{"Múltiplos catch"}</strong> {' — '} {"catch (A|B $e) — captura união (PHP 8)."}
+          </li>
+        <li>
+            <strong>{"Re-throw"}</strong> {' — '} {"lançar de novo com new Custom(prev: $e) preserva cadeia."}
+          </li>
+        </ul>
+    
       <p><strong className="text-[#8993BE] font-mono">throw</strong> — lança uma exceção, interrompendo a execução até encontrar um <code>catch</code> compatível na pilha. Existe pra sinalizar que algo deu errado de forma estruturada. Sintaxe: <code>throw new RuntimeException("msg");</code>. Desde 8.0 também é uma expressão.</p>
 
       <p><strong className="text-[#8993BE] font-mono">try</strong> / <strong className="text-[#8993BE] font-mono">catch</strong> — bloco que envolve código que pode falhar (<code>try</code>) e captura erros específicos (<code>catch</code>). Existe pra recuperar de falhas sem matar o programa. Sintaxe: <code>{`try { ... } catch (TypeException $e) { ... }`}</code>. Desde 8.0, <code>catch</code> dispensa a variável.</p>

@@ -12,7 +12,28 @@ export default function Diretorios() {
       timeToRead="12 min"
       category="Arquivos & I/O"
     >
-      <h2>O problema: listar o que tem numa pasta</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"scandir / glob"}</strong> {' — '} {"lista arquivos; glob aceita padrões."}
+          </li>
+        <li>
+            <strong>{"mkdir/rmdir"}</strong> {' — '} {"cria/remove; mkdir tem flag recursiva."}
+          </li>
+        <li>
+            <strong>{"DirectoryIterator"}</strong> {' — '} {"OO; melhor para iteração."}
+          </li>
+        <li>
+            <strong>{"RecursiveDirectoryIterator"}</strong> {' — '} {"desce subpastas."}
+          </li>
+        <li>
+            <strong>{"Path traversal"}</strong> {' — '} {"sanitize input — nunca confie em ../ vindo de fora."}
+          </li>
+        </ul>
+          <h2>O problema: listar o que tem numa pasta</h2>
       <p>
         A função mais simples para isso é <code>scandir()</code>. Ela devolve um array com todos
         os nomes de arquivos e subpastas dentro do caminho informado — incluindo os famosos{" "}

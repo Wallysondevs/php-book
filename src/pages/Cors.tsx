@@ -13,7 +13,28 @@ export default function Cors() {
       timeToRead="11 min"
       category="APIs REST"
     >
-      <h2>O problema: o navegador é paranoico (de propósito)</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"CORS"}</strong> {' — '} {"Cross-Origin Resource Sharing — quem pode chamar sua API."}
+          </li>
+        <li>
+            <strong>{"Access-Control-Allow-Origin"}</strong> {' — '} {"origem(s) permitida(s); * é amplo demais para credentials."}
+          </li>
+        <li>
+            <strong>{"Preflight"}</strong> {' — '} {"browser manda OPTIONS antes de métodos não-simples."}
+          </li>
+        <li>
+            <strong>{"Allow-Credentials"}</strong> {' — '} {"true permite cookies; exige Origin específica."}
+          </li>
+        <li>
+            <strong>{"Allow-Headers/Methods"}</strong> {' — '} {"whitelist do que client pode enviar."}
+          </li>
+        </ul>
+          <h2>O problema: o navegador é paranoico (de propósito)</h2>
       <p>
         Você terminou a API em <code>http://api.exemplo.com</code>, abriu o frontend
         em <code>http://app.exemplo.com</code>, fez <code>fetch()</code>... e o console

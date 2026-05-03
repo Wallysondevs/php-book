@@ -14,7 +14,25 @@ export default function IfElse() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/sintaxe" className="text-[#8993BE] underline">Sintaxe básica</a>, <a href="#/variaveis" className="text-[#8993BE] underline">Variáveis</a>, <a href="#/operadores" className="text-[#8993BE] underline">Operadores</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"if/elseif/else"}</strong> {' — '} {"estrutura clássica de decisão; elseif é uma palavra só."}
+          </li>
+        <li>
+            <strong>{"Sintaxe alternativa"}</strong> {' — '} {"if (...): ... endif; — usada em templates HTML."}
+          </li>
+        <li>
+            <strong>{"Truthy/Falsy"}</strong> {' — '} {"0, \"0\", \"\", null, [] e false são falsy; resto é truthy."}
+          </li>
+        <li>
+            <strong>{"Ternário"}</strong> {' — '} {"cond ? a : b — versão expressão do if."}
+          </li>
+        <li>
+            <strong>{"match (PHP 8)"}</strong> {' — '} {"compara estrito (===) e retorna valor; sucessor moderno do switch."}
+          </li>
+        </ul>
+    
       <h2>O if que você já conhece</h2>
 
       <p><strong className="text-[#8993BE] font-mono">if / elseif / else</strong> — bloco de decisão. <code>if</code> testa a condição; se for verdadeira executa o bloco. <code>elseif</code> (uma palavra só) encadeia outra condição quando a anterior falhou. <code>else</code> é o "qualquer outra coisa". Sintaxe: <code>{`if (cond) { ... } elseif (cond2) { ... } else { ... }`}</code>.</p>

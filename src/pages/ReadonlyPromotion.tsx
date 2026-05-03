@@ -12,7 +12,28 @@ export default function ReadonlyPromotion() {
       timeToRead="10 min"
       category="PHP Moderno"
     >
-      <h2>O problema: classes simples com 30 linhas de boilerplate</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"readonly (8.1)"}</strong> {' — '} {"propriedade só pode ser escrita uma vez (no constructor)."}
+          </li>
+        <li>
+            <strong>{"Promotion (8.0)"}</strong> {' — '} {"public function __construct(private int $x) — declara e atribui."}
+          </li>
+        <li>
+            <strong>{"readonly class (8.2)"}</strong> {' — '} {"todas as props da classe ficam readonly."}
+          </li>
+        <li>
+            <strong>{"Imutabilidade"}</strong> {' — '} {"evita estados inconsistentes; força clone para modificar."}
+          </li>
+        <li>
+            <strong>{"with()"}</strong> {' — '} {"padrão: método retorna nova instância com a alteração."}
+          </li>
+        </ul>
+          <h2>O problema: classes simples com 30 linhas de boilerplate</h2>
       <p>
         No PHP antigo, criar uma classe imutável de três campos exigia: declarar
         propriedades, declarar parâmetros do construtor, atribuir um a um. Toda essa

@@ -14,7 +14,25 @@ export default function SwitchMatch() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/operadores" className="text-[#8993BE] underline">Operadores</a>, <a href="#/if-else" className="text-[#8993BE] underline">if / elseif / else</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"switch"}</strong> {' — '} {"compara com == (loose); precisa break."}
+          </li>
+        <li>
+            <strong>{"match (8.0)"}</strong> {' — '} {"expressão; compara com === (estrito); sem fall-through."}
+          </li>
+        <li>
+            <strong>{"default"}</strong> {' — '} {"caso padrão; em match falha com UnhandledMatchError se ausente."}
+          </li>
+        <li>
+            <strong>{"Múltiplos valores"}</strong> {' — '} {"match(1,2,3) => \"x\" — vírgula agrupa."}
+          </li>
+        <li>
+            <strong>{"Retorno"}</strong> {' — '} {"match retorna valor; switch é statement."}
+          </li>
+        </ul>
+    
       <p><strong className="text-[#8993BE] font-mono">switch vs match</strong> — ambos comparam um valor com várias opções. <code>switch</code> é o velho: usa comparação solta (<code>==</code>), exige <code>break</code> em cada caso (senão "vaza" para o próximo) e é uma <em>declaração</em>. <code>match</code> (PHP 8+) é o moderno: comparação estrita (<code>===</code>), <strong>sem fallthrough</strong>, e é uma <em>expressão</em> que retorna valor. Quando puder, prefira <code>match</code>.</p>
 
       <p><strong className="text-[#8993BE] font-mono">break</strong> — sai imediatamente do bloco atual (<code>switch</code>, <code>for</code>, <code>while</code>, <code>foreach</code>). Em <code>switch</code> é obrigatório para evitar fallthrough. Aceita um número opcional (<code>break 2</code>) para escapar de loops aninhados.</p>

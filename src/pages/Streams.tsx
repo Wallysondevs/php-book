@@ -13,7 +13,28 @@ export default function Streams() {
       timeToRead="13 min"
       category="Arquivos & I/O"
     >
-      <h2>O conceito que muda tudo</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Stream"}</strong> {' — '} {"abstração para I/O (arquivo, http, php://memory)."}
+          </li>
+        <li>
+            <strong>{"fopen wrappers"}</strong> {' — '} {"http://, ftp://, php://, data://."}
+          </li>
+        <li>
+            <strong>{"Filtros"}</strong> {' — '} {"stream_filter_append — transforma dados em trânsito."}
+          </li>
+        <li>
+            <strong>{"Context"}</strong> {' — '} {"stream_context_create define opções (timeout, headers)."}
+          </li>
+        <li>
+            <strong>{"Non-blocking"}</strong> {' — '} {"stream_set_blocking false — base de servers async."}
+          </li>
+        </ul>
+          <h2>O conceito que muda tudo</h2>
       <p>
         O PHP enxerga arquivos, conexões de rede, blocos de memória e até strings codificadas em
         base64 como <strong>streams</strong>: sequências de bytes que você lê e escreve com as

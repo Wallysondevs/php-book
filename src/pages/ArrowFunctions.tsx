@@ -14,7 +14,25 @@ export default function ArrowFunctions() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/funcoes" className="text-[#8993BE] underline">Funções básicas</a>, <a href="#/type-hints" className="text-[#8993BE] underline">Type hints</a>, <a href="#/array-functions" className="text-[#8993BE] underline">Array functions</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"fn() => expr"}</strong> {' — '} {"sintaxe curta de closure (PHP 7.4+); só uma expressão."}
+          </li>
+        <li>
+            <strong>{"Captura automática"}</strong> {' — '} {"arrow functions enxergam variáveis do escopo pai sem use()."}
+          </li>
+        <li>
+            <strong>{"vs closure"}</strong> {' — '} {"closure aceita múltiplas linhas e use() explícito."}
+          </li>
+        <li>
+            <strong>{"Imutabilidade"}</strong> {' — '} {"sempre por valor — não há captura por referência."}
+          </li>
+        <li>
+            <strong>{"Uso típico"}</strong> {' — '} {"callbacks de array_map, array_filter, usort."}
+          </li>
+        </ul>
+    
       <h2>O problema: passar comportamento como argumento</h2>
       <p>
         Funções como <code>array_map</code>, <code>array_filter</code> e <code>usort</code> esperam

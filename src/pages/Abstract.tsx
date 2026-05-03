@@ -11,7 +11,28 @@ export default function Abstract() {
       timeToRead="10 min"
       category="POO"
     >
-      <h2>O problema: o pai que não deveria existir sozinho</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"abstract class"}</strong> {' — '} {"não pode ser instanciada diretamente."}
+          </li>
+        <li>
+            <strong>{"abstract function"}</strong> {' — '} {"método sem corpo — força filha a implementar."}
+          </li>
+        <li>
+            <strong>{"vs interface"}</strong> {' — '} {"classe abstrata pode ter código e estado; interface não."}
+          </li>
+        <li>
+            <strong>{"Template method"}</strong> {' — '} {"padrão clássico onde abstract define esqueleto."}
+          </li>
+        <li>
+            <strong>{"protected abstract"}</strong> {' — '} {"comum para hooks usados internamente pela base."}
+          </li>
+        </ul>
+          <h2>O problema: o pai que não deveria existir sozinho</h2>
       <p>
         Você tem <code>NotificadorEmail</code>, <code>NotificadorSms</code> e <code>NotificadorPush</code>. Todos
         gravam log, formatam timestamp e validam o destinatário <strong>do mesmo jeito</strong>. Só muda como entregam

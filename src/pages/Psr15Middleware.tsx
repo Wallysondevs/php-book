@@ -14,7 +14,28 @@ export default function Psr15Middleware() {
       timeToRead="14 min"
       category="PSR Standards"
     >
-      <h2>O problema: cross-cutting concerns sem virar bagunça</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"MiddlewareInterface"}</strong> {' — '} {"process(Request, Handler): Response."}
+          </li>
+        <li>
+            <strong>{"Pipeline"}</strong> {' — '} {"cadeia de middlewares; cada um pode short-circuit."}
+          </li>
+        <li>
+            <strong>{"Onion model"}</strong> {' — '} {"request entra; cada camada pode mexer no response na volta."}
+          </li>
+        <li>
+            <strong>{"Uso"}</strong> {' — '} {"auth, CORS, rate limit, logging."}
+          </li>
+        <li>
+            <strong>{"Handlers"}</strong> {' — '} {"RequestHandlerInterface — endpoint final da cadeia."}
+          </li>
+        </ul>
+          <h2>O problema: cross-cutting concerns sem virar bagunça</h2>
       <p>
         Toda app HTTP precisa logar requisições, validar autenticação, configurar CORS, tratar
         erros, comprimir respostas. Se você espalhar isso pelos controllers, vira <em>copy-paste</em>{" "}

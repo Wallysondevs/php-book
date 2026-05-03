@@ -13,7 +13,28 @@ export default function Producao() {
       timeToRead="14 min"
       category="Deploy"
     >
-      <h2>O abismo entre dev e produção</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"display_errors=Off"}</strong> {' — '} {"nunca mostre stack para usuário."}
+          </li>
+        <li>
+            <strong>{"log_errors=On"}</strong> {' — '} {"mande para syslog ou arquivo."}
+          </li>
+        <li>
+            <strong>{"OPcache"}</strong> {' — '} {"sempre ligado; validate_timestamps=0."}
+          </li>
+        <li>
+            <strong>{"HTTPS"}</strong> {' — '} {"Let\\u2019s Encrypt + HSTS."}
+          </li>
+        <li>
+            <strong>{"Backups"}</strong> {' — '} {"banco + arquivos + teste de restore."}
+          </li>
+        </ul>
+          <h2>O abismo entre dev e produção</h2>
       <p>
         Em desenvolvimento, você quer ver erros gritando na tela. Em produção, mostrar erro para o
         usuário é <strong>vazamento de informação</strong> — caminho de arquivo, query SQL,

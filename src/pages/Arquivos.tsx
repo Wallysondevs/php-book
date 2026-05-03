@@ -12,7 +12,28 @@ export default function Arquivos() {
       timeToRead="12 min"
       category="Arquivos & I/O"
     >
-      <h2>O problema: você precisa ler um arquivo. E daí?</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"file_get_contents / file_put_contents"}</strong> {' — '} {"leitura/escrita rápida em uma chamada."}
+          </li>
+        <li>
+            <strong>{"fopen/fread/fwrite"}</strong> {' — '} {"controle granular com handle."}
+          </li>
+        <li>
+            <strong>{"SplFileObject"}</strong> {' — '} {"OO: itera linha a linha."}
+          </li>
+        <li>
+            <strong>{"flock"}</strong> {' — '} {"lock cooperativo entre processos."}
+          </li>
+        <li>
+            <strong>{"realpath"}</strong> {' — '} {"resolve .., symlinks; null se não existe."}
+          </li>
+        </ul>
+          <h2>O problema: você precisa ler um arquivo. E daí?</h2>
       <p>
         Em quase todo projeto real, mais cedo ou mais tarde, surge a necessidade de ler ou
         gravar arquivos: um <code>.env</code>, um <code>config.json</code>, um log, um CSV

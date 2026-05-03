@@ -13,7 +13,28 @@ export default function PhpCsFixer() {
       timeToRead="12 min"
       category="Qualidade"
     >
-      <h2>O problema: o code review virou aula de estilo</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"PHP CS Fixer"}</strong> {' — '} {"corrige estilo automaticamente."}
+          </li>
+        <li>
+            <strong>{"Rule sets"}</strong> {' — '} {"@PSR12, @PhpCsFixer, @Symfony."}
+          </li>
+        <li>
+            <strong>{".php-cs-fixer.dist.php"}</strong> {' — '} {"config no projeto."}
+          </li>
+        <li>
+            <strong>{"CI integration"}</strong> {' — '} {"rode em pre-commit + pipeline."}
+          </li>
+        <li>
+            <strong>{"vs PHP_CodeSniffer"}</strong> {' — '} {"sniffer só aponta; fixer corrige."}
+          </li>
+        </ul>
+          <h2>O problema: o code review virou aula de estilo</h2>
       <p>
         Espaço antes do parêntese? Chaves na mesma linha? <code>use</code> ordenado por nome? Toda
         equipe perde semanas discutindo isso. A solução é delegar a regra para uma ferramenta:{" "}

@@ -13,7 +13,28 @@ export default function Forms() {
       timeToRead="13 min"
       category="Web & Banco"
     >
-      <h2>O básico: um formulário e quem o recebe</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"$_GET / $_POST"}</strong> {' — '} {"arrays com dados de URL/body."}
+          </li>
+        <li>
+            <strong>{"enctype=\"multipart/form-data\""}</strong> {' — '} {"obrigatório para upload de arquivos."}
+          </li>
+        <li>
+            <strong>{"CSRF"}</strong> {' — '} {"token único por sessão para evitar requisições forjadas."}
+          </li>
+        <li>
+            <strong>{"Validação"}</strong> {' — '} {"sempre no servidor — front-end valida só por UX."}
+          </li>
+        <li>
+            <strong>{"htmlspecialchars()"}</strong> {' — '} {"escapa output para evitar XSS."}
+          </li>
+        </ul>
+          <h2>O básico: um formulário e quem o recebe</h2>
       <p>
         O navegador envia dados via dois métodos principais: <strong>GET</strong> (na URL) e{" "}
         <strong>POST</strong> (no corpo da requisição). PHP expõe esses dados nos

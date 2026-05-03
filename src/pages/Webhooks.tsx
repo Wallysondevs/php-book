@@ -13,7 +13,28 @@ export default function Webhooks() {
       timeToRead="13 min"
       category="HTTP Cliente"
     >
-      <h2>O problema: você é o servidor agora</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Webhook"}</strong> {' — '} {"callback HTTP que provedor faz para sua URL ao acontecer evento."}
+          </li>
+        <li>
+            <strong>{"Assinatura"}</strong> {' — '} {"HMAC no header — verifique para autenticidade."}
+          </li>
+        <li>
+            <strong>{"Idempotência"}</strong> {' — '} {"mesmo evento pode chegar 2x — use id único."}
+          </li>
+        <li>
+            <strong>{"Retry"}</strong> {' — '} {"provedor reenvia em caso de 5xx; responda 2xx rápido."}
+          </li>
+        <li>
+            <strong>{"Replay"}</strong> {' — '} {"logs em fila evitam perder evento durante deploy."}
+          </li>
+        </ul>
+          <h2>O problema: você é o servidor agora</h2>
       <p>
         Stripe acabou de cobrar um cartão. GitHub acabou de receber um push. Mailgun não
         conseguiu entregar um email. Todos esses sistemas precisam <strong>te avisar</strong>{" "}

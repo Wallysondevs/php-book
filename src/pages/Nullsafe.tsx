@@ -12,7 +12,28 @@ export default function Nullsafe() {
       timeToRead="9 min"
       category="PHP Moderno"
     >
-      <h2>O problema: a escada do null</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"$o?->m()"}</strong> {' — '} {"chama método só se $o não for null."}
+          </li>
+        <li>
+            <strong>{"Encadeado"}</strong> {' — '} {"$user?->profile?->avatar — para na primeira null."}
+          </li>
+        <li>
+            <strong>{"vs ??"}</strong> {' — '} {"?? trata null no resultado; ?-> evita chamar método."}
+          </li>
+        <li>
+            <strong>{"Limitação"}</strong> {' — '} {"não funciona à esquerda de atribuição."}
+          </li>
+        <li>
+            <strong>{"Combina com ??"}</strong> {' — '} {"$x = $o?->name ?? \"default\";"}
+          </li>
+        </ul>
+          <h2>O problema: a escada do null</h2>
       <p>
         Você quer pegar o nome do país do endereço do perfil de um usuário. Em
         qualquer lugar do caminho, algum elo pode ser <code>null</code>. Antes do

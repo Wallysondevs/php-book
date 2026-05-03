@@ -13,7 +13,28 @@ export default function Rector() {
       timeToRead="12 min"
       category="Qualidade"
     >
-      <h2>O problema: legado parado é dívida que cresce</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Rector"}</strong> {' — '} {"refatoração automatizada baseada em regras."}
+          </li>
+        <li>
+            <strong>{"Sets"}</strong> {' — '} {"PHP 7→8, Laravel x→y, Symfony etc."}
+          </li>
+        <li>
+            <strong>{"Custom rules"}</strong> {' — '} {"estenda AbstractRector para suas convenções."}
+          </li>
+        <li>
+            <strong>{"Dry run"}</strong> {' — '} {"rector process --dry-run mostra mudanças sem aplicar."}
+          </li>
+        <li>
+            <strong>{"Use case"}</strong> {' — '} {"upgrades de PHP, deprecations, padronização."}
+          </li>
+        </ul>
+          <h2>O problema: legado parado é dívida que cresce</h2>
       <p>
         Você herdou um projeto PHP 7.1 e o cliente quer rodar em PHP 8.4 (correção de segurança,
         performance, OPcache JIT). Refatorar à mão? <code>list()</code> virando array destructuring,

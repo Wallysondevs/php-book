@@ -13,7 +13,28 @@ export default function Instalacao() {
       timeToRead="12 min"
       category="Instalação"
     >
-      <h2>O objetivo: <code>php -v</code> imprimindo 8.4</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Linux"}</strong> {' — '} {"apt install php8.3-fpm + extensões (mbstring, xml, curl)."}
+          </li>
+        <li>
+            <strong>{"macOS"}</strong> {' — '} {"brew install php; ou Herd."}
+          </li>
+        <li>
+            <strong>{"Windows"}</strong> {' — '} {"XAMPP, Laragon ou php.exe + IIS."}
+          </li>
+        <li>
+            <strong>{"Docker"}</strong> {' — '} {"php:8.3-fpm-alpine + composer:2."}
+          </li>
+        <li>
+            <strong>{"php -v / php -m"}</strong> {' — '} {"verifica versão e módulos."}
+          </li>
+        </ul>
+          <h2>O objetivo: <code>php -v</code> imprimindo 8.4</h2>
       <p>
         Você terminou este capítulo quando conseguir abrir um terminal e ver algo como:
       </p>

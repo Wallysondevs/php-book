@@ -13,7 +13,28 @@ export default function Phpstan() {
       timeToRead="14 min"
       category="Qualidade"
     >
-      <h2>O problema: PHP só reclama em runtime</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"PHPStan"}</strong> {' — '} {"análise estática — encontra bugs sem rodar código."}
+          </li>
+        <li>
+            <strong>{"Levels"}</strong> {' — '} {"0 a 9 (ou max); aumente gradualmente."}
+          </li>
+        <li>
+            <strong>{"baseline"}</strong> {' — '} {"congela erros existentes para corrigir aos poucos."}
+          </li>
+        <li>
+            <strong>{"Generics"}</strong> {' — '} {"documente em docblock para PHPStan inferir tipos."}
+          </li>
+        <li>
+            <strong>{"vs Psalm"}</strong> {' — '} {"concorrente direto; APIs semelhantes."}
+          </li>
+        </ul>
+          <h2>O problema: PHP só reclama em runtime</h2>
       <p>
         Em linguagens compiladas, o compilador grita antes do código rodar. Em PHP, você só descobre
         que chamou um método inexistente <em>quando o usuário clica no botão em produção</em>. O{" "}

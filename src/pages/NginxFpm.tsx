@@ -14,7 +14,28 @@ export default function NginxFpm() {
       timeToRead="14 min"
       category="Deploy"
     >
-      <h2>Por que FPM, e não mod_php?</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"PHP-FPM"}</strong> {' — '} {"FastCGI Process Manager — pool de workers PHP."}
+          </li>
+        <li>
+            <strong>{"fastcgi_pass"}</strong> {' — '} {"nginx → unix:/run/php-fpm.sock ou TCP."}
+          </li>
+        <li>
+            <strong>{"try_files"}</strong> {' — '} {"try_files $uri /index.php?$query_string; — front controller."}
+          </li>
+        <li>
+            <strong>{"pm.max_children"}</strong> {' — '} {"workers simultâneos; calcule por RAM."}
+          </li>
+        <li>
+            <strong>{"Buffer"}</strong> {' — '} {"fastcgi_buffers ajusta conforme tamanho de response."}
+          </li>
+        </ul>
+          <h2>Por que FPM, e não mod_php?</h2>
       <p>
         O <strong>PHP-FPM</strong> (FastCGI Process Manager) é um daemon que mantém um pool de
         processos PHP prontos para atender requests. O Nginx <em>não</em> executa PHP — ele apenas

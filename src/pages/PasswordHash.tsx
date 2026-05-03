@@ -12,7 +12,28 @@ export default function PasswordHash() {
       timeToRead="12 min"
       category="Segurança"
     >
-      <h2>O problema: o banco vaza. E aí?</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"password_hash()"}</strong> {' — '} {"gera hash seguro com salt automático (bcrypt/argon2)."}
+          </li>
+        <li>
+            <strong>{"password_verify()"}</strong> {' — '} {"compara senha vs hash em tempo constante."}
+          </li>
+        <li>
+            <strong>{"PASSWORD_BCRYPT/ARGON2ID"}</strong> {' — '} {"algoritmos suportados; argon2id é state-of-the-art."}
+          </li>
+        <li>
+            <strong>{"cost"}</strong> {' — '} {"fator de trabalho — quanto maior, mais lento (segurança)."}
+          </li>
+        <li>
+            <strong>{"Rehash"}</strong> {' — '} {"password_needs_rehash detecta hash antigo para regerar."}
+          </li>
+        </ul>
+          <h2>O problema: o banco vaza. E aí?</h2>
       <p>
         Cedo ou tarde, alguém vaza o seu banco de dados — SQL injection, backup mal
         configurado, ex-funcionário descontente. A pergunta não é <em>se</em>, é{" "}

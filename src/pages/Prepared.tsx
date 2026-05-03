@@ -15,7 +15,25 @@ export default function Prepared() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/pdo" className="text-[#8993BE] underline">PDO</a>, <a href="#/exceptions" className="text-[#8993BE] underline">Try/Catch</a> e <a href="#/classes" className="text-[#8993BE] underline">Classes</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"prepare()"}</strong> {' — '} {"pré-compila SQL com placeholders ? ou :nome."}
+          </li>
+        <li>
+            <strong>{"execute([...])"}</strong> {' — '} {"roda passando os valores; eles NÃO viram SQL."}
+          </li>
+        <li>
+            <strong>{"bindValue / bindParam"}</strong> {' — '} {"liga placeholders; bindParam é por referência."}
+          </li>
+        <li>
+            <strong>{"Anti-injection"}</strong> {' — '} {"driver escapa por você — nunca concatene strings."}
+          </li>
+        <li>
+            <strong>{"Performance"}</strong> {' — '} {"driver pode reusar plano de execução."}
+          </li>
+        </ul>
+    
       <p><strong className="text-[#8993BE] font-mono">prepare</strong> — método <code>$pdo-&gt;prepare($sql)</code> que envia a query (com placeholders <code>?</code> ou <code>:nome</code>) ao banco para parsing. Existe pra separar <em>código SQL</em> de <em>valores</em>, blindando contra SQL injection. Devolve um <code>PDOStatement</code>.</p>
 
       <p><strong className="text-[#8993BE] font-mono">execute</strong> — método <code>$stmt-&gt;execute($params)</code> que roda o statement preparado, opcionalmente recebendo um array com os valores dos placeholders. Pode ser chamado várias vezes mudando só os parâmetros — o banco reaproveita o plano.</p>

@@ -13,7 +13,28 @@ export default function Redis() {
       timeToRead="13 min"
       category="Cache & Filas"
     >
-      <h2>O problema: o banco está suando para responder coisas óbvias</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Redis"}</strong> {' — '} {"key-value in-memory — cache, fila, pub/sub."}
+          </li>
+        <li>
+            <strong>{"ext-redis vs predis"}</strong> {' — '} {"extensão C (rápida) vs cliente puro PHP."}
+          </li>
+        <li>
+            <strong>{"TTL"}</strong> {' — '} {"EXPIRE/PEXPIRE define vida em s/ms."}
+          </li>
+        <li>
+            <strong>{"Estruturas"}</strong> {' — '} {"string, hash, list, set, sorted set, stream."}
+          </li>
+        <li>
+            <strong>{"Persistência"}</strong> {' — '} {"RDB snapshot + AOF append-only log."}
+          </li>
+        </ul>
+          <h2>O problema: o banco está suando para responder coisas óbvias</h2>
       <p>
         Sua API recebe 5.000 req/min para buscar a lista de categorias. As categorias mudam uma vez por
         dia. Mesmo assim, todo request faz <code>SELECT * FROM categorias</code> — e o banco vira

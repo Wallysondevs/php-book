@@ -15,7 +15,25 @@ export default function Interfaces() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/classes" className="text-[#8993BE] underline">Classes e Objetos</a>, <a href="#/visibilidade" className="text-[#8993BE] underline">Visibilidade</a> e <a href="#/heranca" className="text-[#8993BE] underline">Herança</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"interface"}</strong> {' — '} {"só assinaturas; sem implementação (constants permitidas)."}
+          </li>
+        <li>
+            <strong>{"implements"}</strong> {' — '} {"class X implements I, J — múltiplas interfaces."}
+          </li>
+        <li>
+            <strong>{"Polimorfismo"}</strong> {' — '} {"aceitar I como tipo permite trocar implementações sem mexer no código."}
+          </li>
+        <li>
+            <strong>{"vs abstract"}</strong> {' — '} {"interface = só contratos; abstract = contratos + código parcial."}
+          </li>
+        <li>
+            <strong>{"Constantes"}</strong> {' — '} {"interfaces podem declarar const PI = 3.14."}
+          </li>
+        </ul>
+    
       <p><strong className="text-[#8993BE] font-mono">interface</strong> — declara um contrato de métodos públicos sem implementação. Existe pra desacoplar quem usa de quem implementa. Sintaxe: <code>interface Logger {`{ public function info(string $m): void; }`}</code>. Não pode ser instanciada com <code>new</code>.</p>
 
       <p><strong className="text-[#8993BE] font-mono">abstract</strong> — modificador para classes/métodos parcialmente implementados. <code>abstract class</code> não pode ser instanciada; <code>abstract function</code> não tem corpo e obriga a filha concreta a implementar. Sintaxe: <code>abstract class Forma2D {`{ abstract public function area(): float; }`}</code>.</p>

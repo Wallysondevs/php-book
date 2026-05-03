@@ -13,7 +13,28 @@ export default function Fibers() {
       timeToRead="13 min"
       category="Async & Fibers"
     >
-      <h2>O problema: 4 chamadas HTTP que somam 4 segundos</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Fiber (8.1)"}</strong> {' — '} {"co-rotina: bloco que pode pausar/retomar manualmente."}
+          </li>
+        <li>
+            <strong>{"suspend()"}</strong> {' — '} {"devolve controle para quem iniciou; retorna na próxima resume."}
+          </li>
+        <li>
+            <strong>{"vs Generator"}</strong> {' — '} {"fiber pode pausar de qualquer profundidade da call stack."}
+          </li>
+        <li>
+            <strong>{"Uso"}</strong> {' — '} {"base de loops async (ReactPHP, Amp, Revolt)."}
+          </li>
+        <li>
+            <strong>{"start/resume/getReturn"}</strong> {' — '} {"API para controlar a fibra do lado de fora."}
+          </li>
+        </ul>
+          <h2>O problema: 4 chamadas HTTP que somam 4 segundos</h2>
       <p>
         Você precisa buscar dados de quatro APIs. Cada chamada leva 1 segundo. Em código
         síncrono, o total é <strong>4 segundos</strong> — uma após a outra. Em qualquer

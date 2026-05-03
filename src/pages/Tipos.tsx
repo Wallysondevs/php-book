@@ -15,7 +15,25 @@ export default function Tipos() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/sintaxe" className="text-[#8993BE] underline">Sintaxe básica</a>, <a href="#/variaveis" className="text-[#8993BE] underline">Variáveis</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Escalares"}</strong> {' — '} {"int, float, string, bool — guardam um único valor."}
+          </li>
+        <li>
+            <strong>{"Compostos"}</strong> {' — '} {"array e object — guardam coleções/estruturas."}
+          </li>
+        <li>
+            <strong>{"Especiais"}</strong> {' — '} {"null e resource — ausência de valor / handle externo."}
+          </li>
+        <li>
+            <strong>{"gettype() / var_dump()"}</strong> {' — '} {"descobrem o tipo em runtime; var_dump mostra tipo + valor."}
+          </li>
+        <li>
+            <strong>{"Type juggling"}</strong> {' — '} {"conversão automática de tipos em comparações soltas (==)."}
+          </li>
+        </ul>
+    
       <h2>Os dez tipos que você precisa conhecer</h2>
       <p>
         PHP tem um conjunto pequeno e bem definido de tipos. Vamos começar criando um exemplo
@@ -93,12 +111,12 @@ echo PHP_FLOAT_EPSILON . PHP_EOL;
 
 // string com heredoc e nowdoc
 $nome = "mundo";
-$saudacao = <<<TXT
+$saudacao = {"<<<"}TXT
 Olá, $nome!
 Heredoc interpola variáveis.
 TXT;
 
-$literal = <<<'TXT'
+$literal = {"<<<"}'TXT'
 Nada interpola: $nome continua literal.
 TXT;
 

@@ -12,7 +12,28 @@ export default function SplEstruturas() {
       timeToRead="12 min"
       category="SPL & Iteradores"
     >
-      <h2>O array do PHP é mágico — e às vezes um problema</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"SplStack/SplQueue"}</strong> {' — '} {"pilha e fila baseadas em DLL."}
+          </li>
+        <li>
+            <strong>{"SplPriorityQueue"}</strong> {' — '} {"fila com prioridade."}
+          </li>
+        <li>
+            <strong>{"SplObjectStorage"}</strong> {' — '} {"mapa onde chaves são objetos."}
+          </li>
+        <li>
+            <strong>{"SplFixedArray"}</strong> {' — '} {"array de tamanho fixo, mais rápido em loops grandes."}
+          </li>
+        <li>
+            <strong>{"SplHeap"}</strong> {' — '} {"heap min/max para algoritmos."}
+          </li>
+        </ul>
+          <h2>O array do PHP é mágico — e às vezes um problema</h2>
       <p>
         O <code>array</code> do PHP é uma estrutura híbrida: serve de lista, mapa, pilha e fila
         ao mesmo tempo. Isso é prático, mas paga o preço — cada elemento ocupa muito mais

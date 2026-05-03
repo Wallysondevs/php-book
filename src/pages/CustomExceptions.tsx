@@ -12,7 +12,28 @@ export default function CustomExceptions() {
       timeToRead="10 min"
       category="Erros & Exceções"
     >
-      <h2>O problema: RuntimeException para tudo</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"extends Exception"}</strong> {' — '} {"cria sua própria classe semântica."}
+          </li>
+        <li>
+            <strong>{"Domínio"}</strong> {' — '} {"PaymentFailed, UserNotFound — exprimem intenção."}
+          </li>
+        <li>
+            <strong>{"Códigos"}</strong> {' — '} {"segundo arg do construtor — útil em APIs."}
+          </li>
+        <li>
+            <strong>{"Cadeia"}</strong> {' — '} {"Exception::__construct(prev: $e) preserva contexto."}
+          </li>
+        <li>
+            <strong>{"Marker interfaces"}</strong> {' — '} {"interface Recoverable — agrupa exceções por categoria."}
+          </li>
+        </ul>
+          <h2>O problema: RuntimeException para tudo</h2>
       <p>
         É tentador resolver qualquer erro com{" "}
         <code>throw new RuntimeException(&quot;...&quot;)</code>. Mas no <code>catch</code>, você

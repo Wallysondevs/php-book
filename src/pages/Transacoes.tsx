@@ -13,7 +13,28 @@ export default function Transacoes() {
       timeToRead="14 min"
       category="Banco Avançado"
     >
-      <h2>O problema clássico: a transferência bancária</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"beginTransaction()"}</strong> {' — '} {"inicia bloco transacional."}
+          </li>
+        <li>
+            <strong>{"commit() / rollBack()"}</strong> {' — '} {"confirma ou desfaz tudo."}
+          </li>
+        <li>
+            <strong>{"ACID"}</strong> {' — '} {"atomicidade, consistência, isolamento, durabilidade."}
+          </li>
+        <li>
+            <strong>{"Savepoints"}</strong> {' — '} {"marcadores intermediários para rollback parcial."}
+          </li>
+        <li>
+            <strong>{"Isolation level"}</strong> {' — '} {"READ COMMITTED, REPEATABLE READ etc — controla concorrência."}
+          </li>
+        </ul>
+          <h2>O problema clássico: a transferência bancária</h2>
       <p>
         Você precisa <strong>debitar R$ 100 da conta A</strong> e <strong>creditar R$ 100 na conta B</strong>.
         Se o servidor cair entre as duas queries, a conta A ficou com R$ 100 a menos e a conta B nunca

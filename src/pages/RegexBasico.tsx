@@ -12,7 +12,28 @@ export default function RegexBasico() {
       timeToRead="13 min"
       category="Regex"
     >
-      <h2>O problema: validar um CEP no formato 12345-678</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"preg_match"}</strong> {' — '} {"verdadeiro/falso + captura primeiro match."}
+          </li>
+        <li>
+            <strong>{"preg_match_all"}</strong> {' — '} {"todos os matches em um array."}
+          </li>
+        <li>
+            <strong>{"preg_replace"}</strong> {' — '} {"substituição por padrão."}
+          </li>
+        <li>
+            <strong>{"Delimitadores"}</strong> {' — '} {"/regex/ — barra é o mais comum, mas qualquer char serve."}
+          </li>
+        <li>
+            <strong>{"Flags"}</strong> {' — '} {"i = case-insensitive, m = multiline, s = . inclui \\\\n."}
+          </li>
+        </ul>
+          <h2>O problema: validar um CEP no formato 12345-678</h2>
       <p>
         Você quer aceitar <code>12345-678</code> mas rejeitar <code>123456789</code>,{" "}
         <code>abcde-fgh</code> e <code>12-345678</code>. Dá para fazer isso com vinte linhas de{" "}

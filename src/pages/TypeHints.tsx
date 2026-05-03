@@ -15,7 +15,25 @@ export default function TypeHints() {
       <AlertBox type="info" title="Pré-requisitos">
         <p>Antes deste capítulo, é bom já ter visto: <a href="#/variaveis" className="text-[#8993BE] underline">Variáveis</a>, <a href="#/tipos" className="text-[#8993BE] underline">Tipos</a>, <a href="#/funcoes" className="text-[#8993BE] underline">Funções básicas</a>.</p>
       </AlertBox>
-
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Escalares"}</strong> {' — '} {"int, float, string, bool — desde PHP 7."}
+          </li>
+        <li>
+            <strong>{"Nullable"}</strong> {' — '} {"?int — aceita int ou null."}
+          </li>
+        <li>
+            <strong>{"Union types (8.0)"}</strong> {' — '} {"int|string — múltiplos tipos permitidos."}
+          </li>
+        <li>
+            <strong>{"Intersection (8.1)"}</strong> {' — '} {"A&B — exige implementar ambas as interfaces."}
+          </li>
+        <li>
+            <strong>{"void/never"}</strong> {' — '} {"void: não retorna nada; never: nunca retorna (lança/exit)."}
+          </li>
+        </ul>
+    
       <p><strong className="text-[#8993BE] font-mono">type hints / return types</strong> — anotações de tipo nos parâmetros (<code>int $n</code>) e no retorno (<code>: string</code>) de uma função. Existem para o PHP vigiar o contrato: chamou com tipo errado, estoura <code>TypeError</code>. Combine com <code>declare(strict_types=1);</code> para o modo estrito.</p>
 
       <p><strong className="text-[#8993BE] font-mono">mixed</strong> — tipo "qualquer coisa". Aceita <code>int</code>, <code>string</code>, <code>array</code>, <code>object</code>, <code>null</code>, etc. Use só quando realmente não dá para ser mais específico — é praticamente desistir da tipagem naquele ponto.</p>

@@ -13,7 +13,28 @@ export default function Sessoes() {
       timeToRead="13 min"
       category="Web & Banco"
     >
-      <h2>HTTP é stateless — e por isso a gente precisa de sessões</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"session_start()"}</strong> {' — '} {"inicia/recupera sessão; manda cookie PHPSESSID."}
+          </li>
+        <li>
+            <strong>{"$_SESSION"}</strong> {' — '} {"array superglobal persistido entre requests."}
+          </li>
+        <li>
+            <strong>{"Handler"}</strong> {' — '} {"pode salvar em arquivo (default), Redis, Memcached, banco."}
+          </li>
+        <li>
+            <strong>{"Lifetime"}</strong> {' — '} {"session.gc_maxlifetime + cookie_lifetime no php.ini."}
+          </li>
+        <li>
+            <strong>{"Hijack"}</strong> {' — '} {"regenere ID após login: session_regenerate_id(true)."}
+          </li>
+        </ul>
+          <h2>HTTP é stateless — e por isso a gente precisa de sessões</h2>
       <p>
         Cada requisição HTTP é independente: o servidor não lembra que você acabou de logar
         no clique anterior. A solução é dar ao navegador um <strong>cookie</strong> com um

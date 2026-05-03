@@ -14,7 +14,28 @@ export default function Openapi() {
       timeToRead="13 min"
       category="APIs REST"
     >
-      <h2>O problema: a documentação que mente</h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"OpenAPI"}</strong> {' — '} {"spec (ex-Swagger) que descreve API em YAML/JSON."}
+          </li>
+        <li>
+            <strong>{"Schema"}</strong> {' — '} {"descreve forma das requisições e respostas."}
+          </li>
+        <li>
+            <strong>{"Geração"}</strong> {' — '} {"codegen produz client/server stubs."}
+          </li>
+        <li>
+            <strong>{"Swagger UI"}</strong> {' — '} {"interface para explorar/testar a API."}
+          </li>
+        <li>
+            <strong>{"Validação"}</strong> {' — '} {"middleware checa request/response contra spec."}
+          </li>
+        </ul>
+          <h2>O problema: a documentação que mente</h2>
       <p>
         Toda API tem um README. E todo README está desatualizado. O endpoint mudou,
         o campo virou opcional, o status passou de 200 para 204 — e o frontend descobre

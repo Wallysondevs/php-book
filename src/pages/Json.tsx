@@ -13,7 +13,28 @@ export default function Json() {
       timeToRead="10 min"
       category="Web & Banco"
     >
-      <h2>De array PHP para JSON: <code>json_encode</code></h2>
+      <AlertBox type="info" title="Pré-requisitos">
+          <p>Antes deste capítulo, é bom já ter visto os capítulos anteriores. Este texto se apoia no que já foi visto sobre PHP.</p>
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"json_encode / json_decode"}</strong> {' — '} {"PHP ↔ JSON; segundo arg true = array associativo."}
+          </li>
+        <li>
+            <strong>{"JSON_THROW_ON_ERROR"}</strong> {' — '} {"flag que troca silent fail por exceção."}
+          </li>
+        <li>
+            <strong>{"JSON_UNESCAPED_UNICODE"}</strong> {' — '} {"mantém acentos legíveis na saída."}
+          </li>
+        <li>
+            <strong>{"JsonSerializable"}</strong> {' — '} {"interface: define jsonSerialize() para classes."}
+          </li>
+        <li>
+            <strong>{"Profundidade"}</strong> {' — '} {"depth default = 512; pode estourar em estruturas grandes."}
+          </li>
+        </ul>
+          <h2>De array PHP para JSON: <code>json_encode</code></h2>
       <p>
         A maioria das APIs que você vai escrever em PHP só precisa converter arrays e objetos
         em JSON e devolver na resposta:
